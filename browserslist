@@ -1,0 +1,30 @@
+# based on es6-modules
+
+# Desktop
+chrome >= 61
+# edge >= 16
+# firefox >= 60
+opera >= 48
+safari >= 11
+
+# Mobile
+ChromeAndroid >= 61
+ios_saf >= 11.2
+FirefoxAndroid >= 60
+android >= 61
+samsung >= 8.2
+QQAndroid >= 10.4
+
+
+# not Baidu 7.12
+# not kaios
+# not UCAndroid
+# not OperaMini
+# not OperaMobile
+# not ie
+# not ExplorerMobile
+
+# based on custom-element
+
+firefox >= 63
+edge >= 79

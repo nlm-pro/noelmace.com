@@ -1,0 +1,37 @@
+{
+  "name": "noelmace.com",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Noël Macé's Personal Web Page",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server .",
+    "release": "standard-version",
+    "release:test": "standard-version --dry-run",
+    "lint:js": "eslint js/*.js",
+    "lint:css": "stylelint style/*.css",
+    "test": "npm run lint:js; npm run lint:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nlm-pro/noelmace.com.git"
+  },
+  "author": "Noël Macé",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/nlm-pro/noelmace.com/issues"
+  },
+  "homepage": "https://github.com/nlm-pro/noelmace.com#readme",
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-plugin-compat": "^3.7.0",
+    "http-server": "^0.12.3",
+    "standard-version": "^9.0.0",
+    "stylelint": "^13.5.0",
+    "stylelint-no-unsupported-browser-features": "^4.0.0"
+  },
+  "dependencies": {
+    "@wessberg/browserslist-generator": "^1.0.36",
+    "caniuse-api": "^3.0.0"
+  }
+}
