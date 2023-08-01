@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/noelmace/noelmace.com/compare/v1.2.2...v2.0.0) (2023-08-01)
+
+
+### Features
+
+* add book and update ([b7cffa8](https://github.com/noelmace/noelmace.com/commit/b7cffa8a58800e2faa923cb40995178e3edcf99a))
+* simpler design ([09f442e](https://github.com/noelmace/noelmace.com/commit/09f442e7e0558285013269f4829bd018541a01ca))
+
 ### [1.2.2](https://github.com/noelmace/noelmace.com/compare/v1.2.1...v1.2.2) (2020-05-26)
 
 
