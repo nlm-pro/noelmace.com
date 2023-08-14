@@ -3,6 +3,8 @@
 dist/
 build/
 
+cv-complet.pdf
+
 ### VS Code ###
 .vscode/*
 !.vscode/settings.json
