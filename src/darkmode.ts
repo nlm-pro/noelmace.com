@@ -1,21 +1,42 @@
-import "https://unpkg.com/dark-mode-toggle@0.5.2/dist/dark-mode-toggle.min.mjs";
+import 'dark-mode-toggle';
 
-const darkModeToggle = document.querySelector('dark-mode-toggle');
-const themeColor = document.querySelector('meta[name="theme-color"]');
-const msTitleColor = document.querySelector('meta[name="msapplication-TileColor"]');
+import type {
+  DarkModeToggle,
+  ColorSchemeChangeEvent,
+} from 'dark-mode-toggle/src/dark-mode-toggle';
 
-const toggleTheme = (e) => {
+const darkModeToggle: DarkModeToggle =
+  document.querySelector('dark-mode-toggle')!;
+const themeColor: HTMLElement = document.querySelector(
+  'meta[name="theme-color"]'
+)!;
+const msTitleColor: HTMLElement = document.querySelector(
+  'meta[name="msapplication-TileColor"]'
+)!;
+
+const toggleTheme = (e: ColorSchemeChangeEvent) => {
   const darkModeOn = e.detail.colorScheme === 'dark' ? true : false;
   const primaryColor = darkModeOn ? 'hsl(0,0%,20%)' : '#24292e';
-  themeColor.content = primaryColor;
-  msTitleColor.content = primaryColor;
+  themeColor.textContent = primaryColor;
+  msTitleColor.textContent = primaryColor;
 };
 
-let searchParam = (new URL(document.location)).searchParams.get('theme');
+let searchParam = new URL(document.location.toString()).searchParams.get(
+  'theme'
+);
+
 if (searchParam === 'dark' || searchParam === 'light') {
-  console.log(darkModeToggle);
   darkModeToggle.setAttribute('mode', searchParam);
+} else {
+  searchParam = null;
 }
 
 document.addEventListener('colorschemechange', toggleTheme);
-toggleTheme({detail: {colorScheme: searchParam || darkModeToggle.mode}});
+
+toggleTheme(
+  new CustomEvent('color-scheme-change', {
+    detail: {
+      colorScheme: searchParam || darkModeToggle.mode,
+    },
+  })
+);
