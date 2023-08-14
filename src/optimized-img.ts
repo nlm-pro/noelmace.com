@@ -1,13 +1,9 @@
 class OptimizedImgComponent extends HTMLElement {
-  constructor() {
-    super();
-
-    this._supportedExtensions = {
-      png: 'image/png',
-      jpeg: 'image/jpeg',
-      jpg: 'image/jpeg',
-    };
-  }
+  private supportedExtensions = {
+    png: 'image/png',
+    jpeg: 'image/jpeg',
+    jpg: 'image/jpeg',
+  };
 
   get src() {
     return this.getAttribute('src');
@@ -21,22 +17,18 @@ class OptimizedImgComponent extends HTMLElement {
     return this.getAttribute('alt');
   }
 
-  get ariaLabel() {
-    return this.getAttribute('aria-label');
-  }
-
   get srcExtension() {
-    return this.src.split('.').pop();
+    return this.src?.split('.').pop() || '';
   }
 
   get srcType() {
-    const match = Object.entries(this._supportedExtensions).find(([ext, type]) => this.srcExtension === ext);
+    const match = Object.entries(this.supportedExtensions).find(([ext]) => this.srcExtension === ext);
     return match && match[1];
   }
 
   connectedCallback() {
     this.innerHTML =
-      this.webp && Object.keys(this._supportedExtensions).includes(this.srcExtension)
+      this.webp && Object.keys(this.supportedExtensions).includes(this.srcExtension)
         ? `
       <picture>
         <source srcset="${this.webp}" type="image/webp" />
