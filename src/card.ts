@@ -1,12 +1,38 @@
-class CardComponent extends HTMLElement {
-  constructor() {
-    super();
+import {LitElement, html, css} from 'lit';
+import {customElement, property} from 'lit/decorators.js';
 
-    const shadowRoot = this.attachShadow({ mode: 'open' });
+@customElement('link-card')
+export class CardComponent extends LitElement {
+  @property()
+  alt: string = 'Demo';
 
-    const style = document.createElement('style');
+  @property()
+  href: string = '#';
 
-    style.textContent = /* CSS */ `
+  @property()
+  src: string = '/images/question-mark-white.svg';
+
+  @property()
+  webp: string = '';
+
+  @property({
+    attribute: 'color-scheme'
+  })
+  colorScheme: string = 'light';
+
+  @property({
+    attribute: 'title'
+  })
+  cardTitle: string =  'Lorem Ispum';
+
+  @property({ attribute: 'subtitle'})
+  cardSubTitle: string = 'dolor sit amet';
+
+  @property()
+  label: string = 'Demo card';
+
+  static override get styles() {
+    return css`
       * {
         font-size: var(--font-size, 14px);
         margin: 0;
@@ -31,7 +57,7 @@ class CardComponent extends HTMLElement {
       }
 
       h1 {
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         font-weight: 600;
         padding: 0;
       }
@@ -41,7 +67,8 @@ class CardComponent extends HTMLElement {
         text-decoration: none;
       }
 
-      img, ::slotted(svg) {
+      img,
+      ::slotted(svg) {
         margin-bottom: 1rem;
         border-radius: 3px;
         padding: 1rem;
@@ -49,55 +76,28 @@ class CardComponent extends HTMLElement {
         width: 110px;
       }
     `;
+  }
 
-    shadowRoot.appendChild(style);
-
-    const container = document.createElement('div');
-    container.className = 'container';
-
-    container.innerHTML = /* HTML */ `
-      <a href="${this.href}" aria-label="${this.label}" target="_blank" rel="noopener noreferrer">
-        <slot><optimized-img src="${this.src}" webp="${this.webp}" alt="${this.alt}"></optimized-img></slot>
-        <h1>${this.cardTitle}</h1>
-        <h2>${this.cardSubTitle}</h2>
-      </a>
+  override render() {
+    return html`
+      <div class="container">
+        <a
+          href="${this.href}"
+          aria-label="${this.label}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <slot
+            ><optimized-img
+              src="${this.src}"
+              webp="${this.webp}"
+              alt="${this.alt}"
+            ></optimized-img
+          ></slot>
+          <h1>${this.cardTitle}</h1>
+          <h2>${this.cardSubTitle}</h2>
+        </a>
+      </div>
     `;
-
-    shadowRoot.appendChild(container);
-  }
-
-  get alt() {
-    return this.getAttribute('alt') || 'Demo';
-  }
-
-  get href() {
-    return this.getAttribute('href') || '#';
-  }
-
-  // see https://github.com/noelmace/noelmace.com/commit/c8c2a33e for theme color
-  get src() {
-    return this.getAttribute('src') || '/images/question-mark-white.svg';
-  }
-
-  get webp() {
-    return this.getAttribute('webp');
-  }
-
-  get colorScheme() {
-    return this.getAttribute('color-scheme') || 'light';
-  }
-
-  get cardTitle() {
-    return this.getAttribute('title') || 'Lorem Ispum';
-  }
-
-  get cardSubTitle() {
-    return this.getAttribute('subtitle') || 'dolor sit amet';
-  }
-
-  get label() {
-    return this.getAttribute('label') || 'Demo card';
   }
 }
-
-window.customElements.define('link-card', CardComponent);

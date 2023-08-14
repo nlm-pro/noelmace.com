@@ -1,43 +1,42 @@
-class OptimizedImgComponent extends HTMLElement {
-  private supportedExtensions = {
+import {LitElement, html} from 'lit';
+import {customElement, property} from 'lit/decorators.js';
+
+@customElement('optimized-img')
+export class OptimizedImgComponent extends LitElement {
+  private readonly supportedExtensions = {
     png: 'image/png',
     jpeg: 'image/jpeg',
     jpg: 'image/jpeg',
   };
 
-  get src() {
-    return this.getAttribute('src');
-  }
+  @property()
+  src: string = '';
 
-  get webp() {
-    return this.getAttribute('webp');
-  }
+  @property()
+  webp: string = '';
 
-  get alt() {
-    return this.getAttribute('alt');
-  }
+  @property()
+  alt: string = '';
 
   get srcExtension() {
     return this.src?.split('.').pop() || '';
   }
 
   get srcType() {
-    const match = Object.entries(this.supportedExtensions).find(([ext]) => this.srcExtension === ext);
+    const match = Object.entries(this.supportedExtensions).find(
+      ([ext]) => this.srcExtension === ext
+    );
     return match && match[1];
   }
 
-  connectedCallback() {
-    this.innerHTML =
-      this.webp && Object.keys(this.supportedExtensions).includes(this.srcExtension)
-        ? `
-      <picture>
-        <source srcset="${this.webp}" type="image/webp" />
-        <source srcset="${this.src}" type="${this.srcType}" />
-        <img src="${this.src}" alt="${this.alt}" />
-      </picture>
-    `
-        : `<img src=${this.src} alt="${this.alt} aria-label="${this.ariaLabel}" />`;
+  override render() {
+    return this.webp &&
+      Object.keys(this.supportedExtensions).includes(this.srcExtension)
+      ? html`<picture>
+          <source srcset="${this.webp}" type="image/webp" />
+          <source srcset="${this.src}" type="${this.srcType}" />
+          <img src="${this.src}" alt="${this.alt}" />
+        </picture>`
+      : html`<img src=${this.src} alt="${this.alt} aria-label="${this.ariaLabel}" />`;
   }
 }
-
-window.customElements.define('optimized-img', OptimizedImgComponent);
