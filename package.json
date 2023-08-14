@@ -5,12 +5,24 @@
   "description": "Noël Macé's Personal Web Page",
   "main": "index.html",
   "scripts": {
-    "start": "http-server .",
+    "start": "run-p build_watch:ts serve",
+    "start_prod": "run-s build prod:serve",
+    "serve": "wds --watch",
+    "prod:serve": "MODE=prod npm run serve",
     "release": "standard-version",
     "release:test": "standard-version --dry-run",
-    "lint:js": "eslint js/*.js",
+    "lint:ts": "eslint src/**/*.ts",
     "lint:css": "stylelint style/*.css",
-    "test": "npm run lint:js; npm run lint:css"
+    "lint": "run-s 'lint:*'",
+    "test:dev": "wtr",
+    "test:prod": "MODE=prod wtr",
+    "test": "run-s test:dev test:prod",
+    "test_prod_watch": "MODE=prod wtr --watch",
+    "test_watch": "wtr --watch",
+    "build:ts": "rimraf dist && tsc",
+    "build_watch:ts": "tsc --watch",
+    "build:rollup": "rimraf build && rollup -c",
+    "build": "run-s build:ts build:rollup"
   },
   "repository": {
     "type": "git",
