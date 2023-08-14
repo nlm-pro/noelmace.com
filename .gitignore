@@ -1,8 +1,9 @@
+### Build ###
 
-# Created by https://www.gitignore.io/api/code,node
-# Edit at https://www.gitignore.io/?templates=code,node
+dist/
+build/
 
-### Code ###
+### VS Code ###
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -114,6 +115,3 @@ dist/
 # Temporary folders
 tmp/
 temp/
-
-# End of https://www.gitignore.io/api/code,node
-n
