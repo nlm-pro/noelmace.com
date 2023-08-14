@@ -1,30 +1,7 @@
 import {LitElement, html} from 'lit';
 import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 import {classMap} from 'lit/directives/class-map.js';
-
-interface ExperienceItemWording {
-  jobTitle?: string;
-  duration?: string;
-  company?: {
-    name?: string;
-    details?: string;
-  };
-  startDate?: string;
-  endDate?: string;
-  details?: string[] | string;
-  shortLine?: boolean;
-  icon: string;
-}
-
-export interface ExperienceWording {
-  title: string;
-  items: ExperienceItemWording[][];
-  dateIntervals: {
-    noEnd: string;
-    start: string;
-    end: string;
-  };
-}
+import type {ExperienceWording} from './wording';
 
 export class CVExperienceElement extends LitElement {
   static override get properties() {
