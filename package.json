@@ -23,15 +23,27 @@
   },
   "homepage": "https://github.com/nlm-pro/noelmace.com#readme",
   "devDependencies": {
-    "eslint": "^7.1.0",
-    "eslint-plugin-compat": "^3.7.0",
-    "http-server": "^0.12.3",
-    "standard-version": "^9.0.0",
-    "stylelint": "^13.5.0",
-    "stylelint-no-unsupported-browser-features": "^4.0.0"
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@web/dev-server": "^0.3.0",
+    "@web/rollup-plugin-copy": "^0.4.0",
+    "@web/rollup-plugin-html": "^2.0.0",
+    "@web/test-runner": "^0.17.0",
+    "@web/test-runner-playwright": "^0.10.1",
+    "eslint": "^8.47.0",
+    "npm-run-all2": "^6.0.6",
+    "prettier": "^3.0.1",
+    "rimraf": "^5.0.1",
+    "rollup": "^2.79.1",
+    "rollup-plugin-minify-html-literals": "^1.2.6",
+    "rollup-plugin-summary": "^2.0.0",
+    "standard-version": "^9.5.0"
   },
   "dependencies": {
     "@wessberg/browserslist-generator": "^1.0.36",
-    "caniuse-api": "^3.0.0"
+    "caniuse-api": "^3.0.0",
+    "dark-mode-toggle": "^0.14.6",
+    "lit": "^2.8.0"
   }
 }
