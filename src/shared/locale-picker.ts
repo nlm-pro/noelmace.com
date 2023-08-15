@@ -16,29 +16,50 @@ const localeNames: {
 @localized()
 export class LocalePicker extends LitElement {
   static override styles = css`
-    select, option {
-      background-color: var(--color-lvl3);
-      color: var(--font-color);
+    .select, select {
+      background-color: var(--light-on-primary);
+      color: var(--font-on-primary);
+      border-radius: 0;
     }
     
+    .select {
+      box-shadow: var(--raise-2dp);
+      position: relative;
+    }
+
     select {
+      padding: 5px .5rem;
+      appearance: none;
       border: none;
-      padding: 5px 5px 5px 10px;
-      border-radius: 5px;
-      border-right: 5px solid transparent;
+      outline: none;
+      border-right: solid 1rem transparent;
+      cursor: pointer;
+    }
+
+    .select::after {
+      content: '\u2B9F';
+      font-weight: bold;
+      padding-right: .5rem;
+      position: absolute;
+      right: 0;
+      top: 3px;
+      pointer-events: none;
+      padding-block: 5px;
+      vertical-align: sub;
+      font-size: .6rem;
     }
   `;
   @state()
   private initialSetLocale: Promise<TemplateResult> = setInitialLocale().then(
     () =>
-      html`<select @change=${this.localeChanged}>
+      html`<div class="select"><select @change=${this.localeChanged}>
         ${allLocales.map(
           (locale) =>
             html`<option value=${locale} ?selected=${locale === getLocale()}>
               ${localeNames[locale]}
             </option>`
         )}
-      </select>`
+      </select></div>`
   );
 
   override render() {

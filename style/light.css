@@ -1,5 +1,6 @@
 :root {
-  --primary-color: #24292e;
+  --primary-color: #393e42;
+  --light-on-primary: #65696c;
   --link-card-fill-color: var(--primary-color);
   --primary-color-light: #e6ebf1;
   --primary-color-dark: #000004;

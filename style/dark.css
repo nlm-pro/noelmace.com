@@ -16,6 +16,7 @@
   --link-card-bg-color: var(--primary-color);
   --link-card-bg-color-hover: var(--primary-color-light);
   --button-hover-bg-color: var(--primary-color-light);
+  --light-on-primary: var(--color-lvl4);
 }
 
 section {
