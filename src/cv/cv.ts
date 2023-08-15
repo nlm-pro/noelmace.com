@@ -742,9 +742,17 @@ export default class CVElement extends LitElement {
           padding-bottom: 0.5rem;
         }
 
-        .networks__item {
+        .networks__item, .networks__item > a {
           display: flex;
           align-items: center;
+        }
+
+        li > a {
+          width: 100%;
+        }
+
+        li > a:hover {
+          background-color: rgba(255,255,255,.1);
         }
 
         .networks__item img {
@@ -1029,26 +1037,28 @@ export default class CVElement extends LitElement {
                 <ul>
                   ${this.wording.presentation.networks.content.map((item) =>
                     item.url
-                      ? html`<a
-                          href=${item.url}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                          class="invisible-link"
-                          ><li class="networks__item">
+                      ? html`<li class="networks__item">
+                          <a
+                            href=${item.url}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="invisible-link"
+                          >
                             <img
                               src=${item.icon}
                               alt=${item.alt}
                               class="light-icon"
-                            /><span class="networks__item__content"
-                              >${item.text}</span
-                            >
-                          </li></a
-                        > `
+                            />
+                            <span class="networks__item__content">
+                              ${item.text}
+                            </span>
+                          </a>
+                        </li>`
                       : html`<li class="networks__item">
-                          <img src=${item.icon} alt=${item.alt} /><span
-                            class="networks__item__content"
-                            >${item.text}</span
-                          >
+                          <img src=${item.icon} alt=${item.alt} />
+                          <span class="networks__item__content">
+                            ${item.text}
+                          </span>
                         </li>`
                   )}
                 </ul>
