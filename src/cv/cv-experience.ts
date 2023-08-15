@@ -1,43 +1,20 @@
 import {LitElement, html} from 'lit';
 import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 import {classMap} from 'lit/directives/class-map.js';
+import type {ExperienceWording} from './wording';
+import { customElement, property, state } from 'lit/decorators.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
-interface ExperienceItemWording {
-  jobTitle?: string;
-  duration?: string;
-  company?: {
-    name?: string;
-    details?: string;
-  };
-  startDate?: string;
-  endDate?: string;
-  details?: string[] | string;
-  shortLine?: boolean;
-  icon: string;
-}
-
-export interface ExperienceWording {
-  title: string;
-  items: ExperienceItemWording[][];
-  dateIntervals: {
-    noEnd: string;
-    start: string;
-    end: string;
-  };
-}
-
+@customElement('nmc-cv-experience')
 export class CVExperienceElement extends LitElement {
-  static override get properties() {
-    return {
-      wording: {type: Object, attribute: false},
-      _flatGroups: {type: Boolean, state: true},
-      align: {type: Boolean},
-    };
-  }
-
+  @state()
   private _flatGroups = true;
+
+  @property({type: Object, attribute: false})
   public wording: ExperienceWording | undefined;
+  @property({type: Boolean})
   public align = false;
+
   _handleBeforePrint = this.__handleBeforePrint.bind(this);
   _handleAfterPrint = this.__handleAfterPrint.bind(this);
 
@@ -79,7 +56,7 @@ export class CVExperienceElement extends LitElement {
                     'short-line': !!item.shortLine,
                   })}
                 >
-                  <img src=${item.icon} alt=${item.company} />
+                  <img src=${item.icon} alt=${ifDefined(item.company?.name)} />
                 </div>
                 <div class="timeline__event__card">
                   <div class="timeline__event__date">
@@ -145,5 +122,3 @@ export class CVExperienceElement extends LitElement {
     this._flatGroups = true;
   }
 }
-
-customElements.define('nmc-cv-experience', CVExperienceElement);

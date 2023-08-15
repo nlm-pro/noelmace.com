@@ -11,18 +11,20 @@
     "prod:serve": "MODE=prod npm run serve",
     "release": "standard-version",
     "release:test": "standard-version --dry-run",
+    "i18n:extract": "lit-localize extract",
+    "lint:lit": "lit-analyzer",
     "lint:ts": "eslint src/**/*.ts",
-    "lint:css": "stylelint style/*.css",
     "lint": "run-s 'lint:*'",
     "test:dev": "wtr",
     "test:prod": "MODE=prod wtr",
     "test": "run-s test:dev test:prod",
     "test_prod_watch": "MODE=prod wtr --watch",
     "test_watch": "wtr --watch",
+    "build:i18n": "lit-localize build",
     "build:ts": "rimraf dist && tsc",
     "build_watch:ts": "tsc --watch",
     "build:rollup": "rimraf build && rollup -c",
-    "build": "run-s build:ts build:rollup"
+    "build": "run-s build:i18n build:ts build:rollup"
   },
   "repository": {
     "type": "git",
@@ -36,6 +38,8 @@
   "homepage": "https://github.com/nlm-pro/noelmace.com#readme",
   "devDependencies": {
     "@netlify/plugin-lighthouse": "^5.0.0",
+    "@lit/localize-tools": "^0.6.9",
+    "@rollup/plugin-dynamic-import-vars": "^2.0.5",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
@@ -45,6 +49,7 @@
     "@web/test-runner": "^0.17.0",
     "@web/test-runner-playwright": "^0.10.1",
     "eslint": "^8.47.0",
+    "lit-analyzer": "^1.2.1",
     "npm-run-all2": "^6.0.6",
     "prettier": "^3.0.1",
     "rimraf": "^5.0.1",
@@ -54,6 +59,7 @@
     "standard-version": "^9.5.0"
   },
   "dependencies": {
+    "@lit/localize": "^0.11.4",
     "@wessberg/browserslist-generator": "^1.0.36",
     "caniuse-api": "^3.0.0",
     "dark-mode-toggle": "^0.14.6",

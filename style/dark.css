@@ -1,5 +1,5 @@
 :root {
-  --input-color: hsl(0,0%,5%);
+  --input-color: var(--color-lvl0);
   --link-card-fill-color: #fff;
   --color-lvl0: hsl(0,0%,10%);
   --color-lvl1: hsl(0,0%,15%);
@@ -10,12 +10,13 @@
   --primary-color: var(--color-lvl2);
   --primary-color-light: var(--color-lvl3);
   --primary-color-dark: var(--color-lvl1);
-  --link-color: #4183C4;
+  --link-color: #669bcf;
   --font-color: #fff;
   --font-on-primary: #fff;
   --link-card-bg-color: var(--primary-color);
   --link-card-bg-color-hover: var(--primary-color-light);
   --button-hover-bg-color: var(--primary-color-light);
+  --light-on-primary: var(--color-lvl4);
 }
 
 section {
