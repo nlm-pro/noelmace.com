@@ -1,5 +1,6 @@
 import {LitElement, html, css} from 'lit';
 import {unsafeHTML} from 'lit/directives/unsafe-html.js';
+import {customElement, property} from 'lit/decorators.js';
 
 import {wording} from './wording';
 import './cv-experience';
@@ -210,358 +211,352 @@ const timelineStyle = css`
   }
 `;
 
-export default class CVElement extends LitElement {
-  static override get properties() {
-    return {
-      quiet: {type: Boolean},
-      align: {type: Boolean},
-      anonymous: {type: Boolean},
-    };
-  }
+@customElement('nmc-cv')
+export class CVElement extends LitElement {
+  @property({type: Boolean})
+  public quiet = false;
+  @property({type: Boolean})
+  public align = false;
+  @property({type: Boolean})
+  public anonymous = false;
 
-  static override get styles() {
-    return [
-      timelineStyle,
-      css`
-        :host {
-          display: block;
-          margin: 0 auto;
-          max-width: 936px;
-        }
-        :host > section {
-          padding: 1rem;
-        }
+  private wording = wording;
 
-        h1 {
-          font-size: 2rem;
-          margin-top: 0;
+  static override styles = [
+    timelineStyle,
+    css`
+      :host {
+        display: block;
+        margin: 0 auto;
+        max-width: 936px;
+      }
+      :host > section {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-top: 0;
+      }
+
+      .first-page {
+        display: grid;
+        grid-template-columns: 310px 1fr;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #cv__presentation {
+        background-color: var(--primary-color);
+        color: var(--neutral-color-0);
+        padding: 1.7rem;
+      }
+
+      #cv__presentation .note {
+        margin-top: 0;
+        font-style: italic;
+      }
+
+      #cv__presentation .subtitle {
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      #cv__presentation h2 {
+        font-size: 19px;
+      }
+
+      .presentation-contents {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+
+      .presentation-contents > * {
+        flex-grow: 1;
+      }
+
+      .presentation-contents h3 {
+        margin: 4rem 0 0.5rem 1rem;
+      }
+
+      .networks ul,
+      .langs ul {
+        list-style: none;
+        padding-left: 0;
+        padding: 0;
+      }
+
+      .langs li {
+        padding-bottom: 0.5rem;
+      }
+
+      .networks__item,
+      .networks__item > a {
+        display: flex;
+        align-items: center;
+      }
+
+      li > a {
+        width: 100%;
+      }
+
+      li > a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .networks__item img {
+        width: 25px;
+        height: 25px;
+        margin: 0.3rem;
+      }
+
+      .networks__item__content {
+        margin-left: 2rem;
+      }
+
+      #cv__intro {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      #cv__intro > * {
+        margin-top: auto;
+      }
+
+      .cv__intro__item {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #cv__intro .icon-container {
+        text-align: center;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.2rem;
+        margin: 1rem 1rem 0;
+      }
+
+      #cv__intro .icon {
+        width: 50px;
+        margin-bottom: 0.5rem;
+      }
+
+      #cv__xp .details {
+        margin: 0.5rem 0;
+      }
+
+      #cv__xp ul.details {
+        padding-left: 1.5rem;
+      }
+
+      .jobtitle {
+        font-weight: bold;
+      }
+
+      .dates {
+        font-weight: initial;
+      }
+
+      .cv__intro__item__header {
+        display: flex;
+        margin-left: 1rem;
+      }
+
+      .cv__intro__item h3 {
+        margin: 0;
+      }
+
+      .cv__intro__item .title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .cv__intro__item__content {
+        margin-left: 2rem;
+      }
+
+      .cv__intro__cta {
+        text-align: center;
+        font-weight: bold;
+        align-self: center;
+        padding: 1rem;
+      }
+
+      .cv__intro__cta > * {
+        margin: 0;
+      }
+
+      .print-link {
+        font-weight: initial;
+        font-style: italic;
+        text-decoration: underline;
+      }
+
+      .last-page > section {
+        padding: 0 2rem;
+      }
+
+      .cv__accomplishments__content,
+      #cv__misc > ul,
+      #cv__education ul {
+        columns: 2;
+        column-gap: 2rem;
+      }
+
+      .accomplishment:first-child h3 {
+        margin-top: 0;
+      }
+
+      .accomplishment h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .accomplishment > ul {
+        margin-top: 0.5rem;
+      }
+
+      .accomplishment {
+        break-inside: avoid;
+      }
+
+      #cv__misc {
+        margin-top: 0;
+      }
+
+      .last-page h2 {
+        margin-bottom: 1rem;
+      }
+
+      .last-page li {
+        margin: 0.2em 0;
+      }
+
+      @media print {
+        @page {
+          margin: 100cm !important;
+        }
+        .first-page,
+        #cv__xp {
+          break-after: page;
+          width: 100vw;
         }
 
         .first-page {
-          display: grid;
-          grid-template-columns: 310px 1fr;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        #cv__presentation {
-          background-color: var(--primary-color);
-          color: var(--neutral-color-0);
-          padding: 1.7rem;
+          height: 100vh;
+          padding-right: 2rem;
         }
 
-        #cv__presentation .note {
+        #cv__xp {
+          height: 200vh;
           margin-top: 0;
-          font-style: italic;
         }
 
-        #cv__presentation .subtitle {
-          margin-bottom: 0;
-          padding-bottom: 1rem;
-          font-size: 1.1rem;
-          font-weight: bold;
+        #cv__xp > h2 {
+          display: none;
         }
 
-        #cv__presentation h2 {
-          font-size: 19px;
+        #cv__education {
+          margin-top: 0;
         }
 
-        .presentation-contents {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          margin-top: 1rem;
+        .timeline {
+          break-inside: avoid;
+          page-break-inside: avoid;
         }
 
-        .presentation-contents > * {
-          flex-grow: 1;
+        a {
+          text-decoration: none;
+          color: inherit;
         }
 
-        .presentation-contents h3 {
-          margin: 4rem 0 0.5rem 1rem;
-        }
-
-        .networks ul,
-        .langs ul {
-          list-style: none;
-          padding-left: 0;
-          padding: 0;
-        }
-
-        .langs li {
-          padding-bottom: 0.5rem;
-        }
-
-        .networks__item,
-        .networks__item > a {
-          display: flex;
-          align-items: center;
-        }
-
-        li > a {
-          width: 100%;
-        }
-
-        li > a:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .networks__item img {
-          width: 25px;
-          height: 25px;
-          margin: 0.3rem;
-        }
-
-        .networks__item__content {
-          margin-left: 2rem;
-        }
-
-        #cv__intro {
-          display: flex;
-          flex-direction: column;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-        }
-
-        #cv__intro > * {
-          margin-top: auto;
-        }
-
-        .cv__intro__item {
-          display: flex;
-          flex-direction: column;
-        }
-
-        #cv__intro .icon-container {
-          text-align: center;
-          font-weight: bold;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          line-height: 1.2rem;
-          margin: 1rem 1rem 0;
-        }
-
-        #cv__intro .icon {
-          width: 50px;
-          margin-bottom: 0.5rem;
-        }
-
-        #cv__xp .details {
-          margin: 0.5rem 0;
-        }
-
-        #cv__xp ul.details {
-          padding-left: 1.5rem;
-        }
-
-        .jobtitle {
-          font-weight: bold;
-        }
-
-        .dates {
-          font-weight: initial;
-        }
-
-        .cv__intro__item__header {
-          display: flex;
-          margin-left: 1rem;
-        }
-
-        .cv__intro__item h3 {
-          margin: 0;
-        }
-
-        .cv__intro__item .title-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .cv__intro__item__content {
-          margin-left: 2rem;
+        .page-break {
+          break-after: page;
         }
 
         .cv__intro__cta {
-          text-align: center;
-          font-weight: bold;
-          align-self: center;
-          padding: 1rem;
+          border: 1px solid var(--primary-color);
+          border-radius: 6px;
         }
 
-        .cv__intro__cta > * {
-          margin: 0;
+        .cv__intro__cta img {
+          margin: 1rem;
+          height: 32px;
+        }
+      }
+      @media screen {
+        .print-only {
+          display: none;
         }
 
-        .print-link {
-          font-weight: initial;
-          font-style: italic;
-          text-decoration: underline;
+        .invisible-link {
+          text-decoration: none;
+          color: inherit;
         }
 
+        #cv__xp,
+        .last-page {
+          border-top: 1px dashed var(--primary-color-softer);
+        }
+
+        .call-to-action {
+          padding: 0.8rem 34px;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 1.2rem;
+          border-radius: 48px;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+          box-sizing: border-box;
+          cursor: pointer;
+          text-decoration: none;
+          display: inline-block;
+          margin: 0.5rem;
+          background-color: var(--soft-bg-color);
+          color: var(--primary-text-color-stronger);
+          border: none;
+        }
+
+        .call-to-action.primary {
+          background-color: var(--primary-color-softer);
+          color: white;
+        }
+
+        .call-to-action:hover {
+          background-color: var(--stronger-bg-color);
+        }
+
+        .call-to-action.primary:hover {
+          background-color: var(--primary-color);
+        }
+      }
+      @media screen and (max-width: 786px) {
+        .first-page {
+          display: block;
+        }
+        :host > section {
+          padding: 0;
+        }
         .last-page > section {
-          padding: 0 2rem;
+          padding: 0 1rem;
         }
-
         .cv__accomplishments__content,
         #cv__misc > ul,
         #cv__education ul {
-          columns: 2;
-          column-gap: 2rem;
+          columns: initial;
         }
-
-        .accomplishment:first-child h3 {
-          margin-top: 0;
+        section > h2 {
+          text-align: center;
         }
-
-        .accomplishment h3 {
-          margin-bottom: 0.5rem;
-        }
-
-        .accomplishment > ul {
-          margin-top: 0.5rem;
-        }
-
-        .accomplishment {
-          break-inside: avoid;
-        }
-
-        #cv__misc {
-          margin-top: 0;
-        }
-
-        .last-page h2 {
-          margin-bottom: 1rem;
-        }
-
-        .last-page li {
-          margin: 0.2em 0;
-        }
-
-        @media print {
-          @page {
-            margin: 100cm !important;
-          }
-          .first-page,
-          #cv__xp {
-            break-after: page;
-            width: 100vw;
-          }
-
-          .first-page {
-            height: 100vh;
-            padding-right: 2rem;
-          }
-
-          #cv__xp {
-            height: 200vh;
-            margin-top: 0;
-          }
-
-          #cv__xp > h2 {
-            display: none;
-          }
-
-          #cv__education {
-            margin-top: 0;
-          }
-
-          .timeline {
-            break-inside: avoid;
-            page-break-inside: avoid;
-          }
-
-          a {
-            text-decoration: none;
-            color: inherit;
-          }
-
-          .page-break {
-            break-after: page;
-          }
-
-          .cv__intro__cta {
-            border: 1px solid var(--primary-color);
-            border-radius: 6px;
-          }
-
-          .cv__intro__cta img {
-            margin: 1rem;
-            height: 32px;
-          }
-        }
-        @media screen {
-          .print-only {
-            display: none;
-          }
-
-          .invisible-link {
-            text-decoration: none;
-            color: inherit;
-          }
-
-          #cv__xp,
-          .last-page {
-            border-top: 1px dashed var(--primary-color-softer);
-          }
-
-          /* FIXME: duplication */
-          .call-to-action {
-            padding: 0.8rem 34px;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 1.2rem;
-            border-radius: 48px;
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-            box-sizing: border-box;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin: 0.5rem;
-            background-color: var(--soft-bg-color);
-            color: var(--primary-text-color-stronger);
-            border: none;
-          }
-
-          .call-to-action.primary {
-            background-color: var(--primary-color-softer);
-            color: white;
-          }
-
-          .call-to-action:hover {
-            background-color: var(--stronger-bg-color);
-          }
-
-          .call-to-action.primary:hover {
-            background-color: var(--primary-color);
-          }
-        }
-        @media screen and (max-width: 786px) {
-          .first-page {
-            display: block;
-          }
-          :host > section {
-            padding: 0;
-          }
-          .last-page > section {
-            padding: 0 1rem;
-          }
-          .cv__accomplishments__content,
-          #cv__misc > ul,
-          #cv__education ul {
-            columns: initial;
-          }
-          section > h2 {
-            text-align: center;
-          }
-        }
-      `,
-    ];
-  }
-
-  public quiet = false;
-  public align = false;
-  public anonymous = false;
-  private wording = wording;
+      }
+    `,
+  ];
 
   override render() {
     return html`
@@ -743,5 +738,3 @@ export default class CVElement extends LitElement {
     `;
   }
 }
-
-customElements.define('nmc-cv', CVElement);

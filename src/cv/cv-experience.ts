@@ -2,19 +2,18 @@ import {LitElement, html} from 'lit';
 import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 import {classMap} from 'lit/directives/class-map.js';
 import type {ExperienceWording} from './wording';
+import { customElement, property, state } from 'lit/decorators.js';
 
+@customElement('nmc-cv-experience')
 export class CVExperienceElement extends LitElement {
-  static override get properties() {
-    return {
-      wording: {type: Object, attribute: false},
-      _flatGroups: {type: Boolean, state: true},
-      align: {type: Boolean},
-    };
-  }
-
+  @state()
   private _flatGroups = true;
+
+  @property({type: Object, attribute: false})
   public wording: ExperienceWording | undefined;
+  @property({type: Boolean})
   public align = false;
+
   _handleBeforePrint = this.__handleBeforePrint.bind(this);
   _handleAfterPrint = this.__handleAfterPrint.bind(this);
 
@@ -122,5 +121,3 @@ export class CVExperienceElement extends LitElement {
     this._flatGroups = true;
   }
 }
-
-customElements.define('nmc-cv-experience', CVExperienceElement);
