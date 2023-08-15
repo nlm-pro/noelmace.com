@@ -10,6 +10,14 @@
   <source>Dark Theme</source>
   <target>Thème Sombre</target>
 </trans-unit>
+<trans-unit id="s7386689cddca94ee">
+  <source>My Resume</source>
+  <target>Mon parcours</target>
+</trans-unit>
+<trans-unit id="sc0441264eaa583fb">
+  <source>Career</source>
+  <target>Parcours</target>
+</trans-unit>
 </body>
 </file>
 </xliff>

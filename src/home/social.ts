@@ -1,8 +1,10 @@
+import {localized, str, msg} from '@lit/localize';
 import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {homeStyles} from './styles';
 
 @customElement('nmc-social')
+@localized()
 export class AppSocialElement extends LitElement {
   static override styles = [
     homeStyles,
@@ -28,7 +30,7 @@ export class AppSocialElement extends LitElement {
 
   override render() {
     return html`
-      <h1>Hire Me</h1>
+      <h1>${msg(str`Career`)}</h1>
       <div class="cards-container">
         <link-card
           id="cv"
@@ -36,7 +38,7 @@ export class AppSocialElement extends LitElement {
           label="CV"
           alt="CV"
           title="CV"
-          subtitle="My Resume"
+          subtitle=${msg(str`My Resume`)}
         >
           <svg
             width="110"
