@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="fr" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s587adf7955f74f3a">
+  <source>Light Theme</source>
+  <target>Thème Clair</target>
+</trans-unit>
+<trans-unit id="s7b07ef55e99a3fd0">
+  <source>Dark Theme</source>
+  <target>Thème Sombre</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

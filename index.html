@@ -56,15 +56,10 @@
     <link rel="stylesheet" href="/style/dark.css" media="(prefers-color-scheme: dark)" />
     <link rel="stylesheet" href="/style/light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)" />
     <link rel="stylesheet" href="/style/style.css" />
-    <script defer type="module" src="./dist/darkmode.js"></script>
     <script defer nomodule src="./js/nomodule.js"></script>
   </head>
   <body>
-    <header>
-      <h1>No&euml;l Mac&eacute;</h1>
-      <div class="spacer"></div>
-      <dark-mode-toggle light="Light Theme" dark="Dark Theme"></dark-mode-toggle>
-    </header>
+    <nmc-header></nmc-header>
     <main>
       <section id="social">
         <h1>Hire Me</h1>
@@ -118,5 +113,6 @@
     </main>
     <script type="module" src="./dist/optimized-img.js"></script>
     <script type="module" src="./dist/card.js"></script>
+    <script type="module" src="./dist/home/index.js"></script>
   </body>
 </html>

@@ -47,6 +47,10 @@ header {
   background-color: var(--color-lvl3);
 }
 
+locale-picker {
+  margin-right: 1rem;
+}
+
 link-card {
   --link-card-shadow: var(--raise-2dp);
   --link-card-shadow-hover: var(--raise-4dp);

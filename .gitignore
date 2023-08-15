@@ -1,8 +1,15 @@
 ### Build ###
 
+# TS
 dist/
+
+# Rollup
 build/
 
+# lit-localize
+generated/
+
+# CV with contact information
 cv-complet.pdf
 
 ### VS Code ###
