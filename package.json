@@ -5,6 +5,7 @@
   "description": "Noël Macé's Personal Web Page",
   "main": "index.html",
   "scripts": {
+    "prestart": "run-s clean build:i18n",
     "start": "run-p build_watch:ts serve",
     "start_prod": "run-s build prod:serve",
     "serve": "wds --watch",
@@ -20,10 +21,15 @@
     "test": "run-s test:dev test:prod",
     "test_prod_watch": "MODE=prod wtr --watch",
     "test_watch": "wtr --watch",
+    "clean:ts": "rimraf dist",
+    "clean:build": "rimraf build",
+    "clean": "run-s clean:*",
     "build:i18n": "lit-localize build",
-    "build:ts": "rimraf dist && tsc",
+    "prebuild:ts": "npm run clean:ts",
+    "build:ts": "tsc",
     "build_watch:ts": "tsc --watch",
-    "build:rollup": "rimraf build && rollup -c",
+    "prebuild:rollup": "npm run clean:build",
+    "build:rollup": "rollup -c",
     "build": "run-s build:i18n build:ts build:rollup"
   },
   "repository": {
