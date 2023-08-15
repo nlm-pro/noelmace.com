@@ -19,6 +19,16 @@ export const homeStyles = css`
     padding: 1rem;
   }
 
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 1rem;
+  }
+
+  a {
+    color: var(--link-color);
+  }
+  
   * {
     box-sizing: inherit;
   }
