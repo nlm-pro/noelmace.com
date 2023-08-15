@@ -61,21 +61,9 @@
   <body>
     <nmc-header></nmc-header>
     <main>
-      <section id="social">
-        <nmc-social></nmc-social>
-      </section>
-      <section id="contact">
-        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <textarea name="message"></textarea>
-        </form>
-        <nmc-contact-form></nmc-contact-form>
-      </section>
-      <section id="writings">
-        <nmc-book></nmc-book>
-      </section>
+      <nmc-home></nmc-home>
     </main>
-    <script type="module" src="./dist/home/index.js"></script>
+    <script type="module" src="./dist/app-shell/index.js"></script>
+    <script type="module" src="./dist/home/home.js"></script>
   </body>
 </html>

@@ -17,12 +17,6 @@ body {
   background-color: var(--color-lvl0);
 }
 
-.lvl-0,
-section {
-  box-shadow: none;
-  background-color: var(--color-lvl1);
-}
-
 *,
 *:before,
 *:after {
@@ -53,45 +47,4 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
   color: var(--font-color);
   font-size: var(--font-size);
-}
-
-main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-
-section {
-  border: 1px solid var(--border-color);
-  padding: 2rem;
-  text-align: center;
-}
-
-#contact {
-  padding: 2rem;
-}
-
-nmc-contact-form {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-@media (min-width: 1200px) {
-  #contact {
-    grid-column-start: 2;
-    grid-row-end: span 2;
-  }
-}
-
-@media (max-width: 1199px) {
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-  section {
-    padding: 1rem 0;
-  }
-  #contact {
-    padding: 2rem;
-  }
 }

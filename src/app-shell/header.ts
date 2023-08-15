@@ -7,7 +7,7 @@ import type {
 } from 'dark-mode-toggle/src/dark-mode-toggle';
 
 import 'dark-mode-toggle';
-import '../shared/locale-picker';
+import './locale-picker';
 
 @customElement('nmc-header')
 @localized()
