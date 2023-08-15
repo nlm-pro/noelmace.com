@@ -1,16 +1,4 @@
-[build.processing]
-skip_processing = false
-
-[build.processing.css]
-bundle = false
-minify = true
-
-[build.processing.js]
-bundle = false
-minify = true
-
-[build.processing.html]
-pretty_urls = false
-
-[build.processing.images]
-compress = true
+[build]
+  command = "npm run build"
+  base = "/"
+  publish = "build"
