@@ -6,7 +6,7 @@ export type Locale = (typeof allLocales)[number];
 export const {getLocale, setLocale} = configureLocalization({
   sourceLocale,
   targetLocales,
-  loadLocale: (locale: string) => import(`/dist/generated/locales/${locale}.js`),
+  loadLocale: (locale: string) => import(`../generated/locales/${locale}.js`),
 });
 
 const getLocaleFromUrl = () : Locale | null => {
