@@ -1,6 +1,6 @@
 :root {
   --primary-color: #393e42;
-  --light-on-primary: #65696c;
+  --light-on-primary: #606467;
   --link-card-fill-color: var(--primary-color);
   --primary-color-light: #e6ebf1;
   --primary-color-dark: #000004;
@@ -10,7 +10,7 @@
   --color-lvl2: hsl(0,0%,100%);
   --color-lvl3: hsl(0,0%,100%);
   --border-color: #e1e4e8;
-  --link-color: hsl(209.8,52.6%,51.2%);
+  --link-color: #3a75b0;
   --font-color: #000;
   --font-on-primary: #fff;
   --link-card-bg-color: var(--primary-color-light);

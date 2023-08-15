@@ -8,7 +8,6 @@
   --raise-8dp: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
   --shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   --raise-transition: box-shadow 200ms, background-color 200ms;
-  --accent-color: #2f81f7;
 }
 
 link-card svg:not(.preserve-colors) path {
@@ -107,7 +106,7 @@ img {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--link-color);
 }
 
 body {
