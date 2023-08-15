@@ -1,7 +1,7 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 
-import './optimized-img';
+import '../shared/optimized-img';
 
 @customElement('link-card')
 export class CardComponent extends LitElement {

@@ -3,7 +3,7 @@ import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {homeStyles} from './styles';
 
-import '../card';
+import './card';
 
 @customElement('nmc-social')
 @localized()
