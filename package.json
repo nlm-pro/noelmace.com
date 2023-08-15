@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/nlm-pro/noelmace.com#readme",
   "devDependencies": {
+    "@netlify/plugin-lighthouse": "^5.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
