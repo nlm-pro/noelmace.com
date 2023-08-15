@@ -9,6 +9,14 @@ const timelineStyle = css`
     box-sizing: border-box;
   }
 
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+
   .light-icon {
     filter: invert(var(--light-item-inversion, 0));
   }
@@ -713,7 +721,7 @@ export default class CVElement extends LitElement {
         }
 
         #cv__presentation h2 {
-          display: none;
+          font-size: 19px;
         }
 
         .presentation-contents {
@@ -742,7 +750,8 @@ export default class CVElement extends LitElement {
           padding-bottom: 0.5rem;
         }
 
-        .networks__item, .networks__item > a {
+        .networks__item,
+        .networks__item > a {
           display: flex;
           align-items: center;
         }
@@ -752,7 +761,7 @@ export default class CVElement extends LitElement {
         }
 
         li > a:hover {
-          background-color: rgba(255,255,255,.1);
+          background-color: rgba(255, 255, 255, 0.1);
         }
 
         .networks__item img {
@@ -1023,7 +1032,6 @@ export default class CVElement extends LitElement {
             <p class="note">${this.wording.note}</p>
           </div>
           <div class="presentation-contents">
-            <h2>${this.wording.presentation.title}</h2>
             <div class="abstract">
               ${this.wording.presentation.abstract.map(
                 (content) => html`<p>${content}</p>`
@@ -1033,7 +1041,7 @@ export default class CVElement extends LitElement {
           ${!this.wording.presentation.networks
             ? ''
             : html`<div class="networks">
-                <h3>${this.wording.presentation.networks.title}</h3>
+                <h2>${this.wording.presentation.networks.title}</h2>
                 <ul>
                   ${this.wording.presentation.networks.content.map((item) =>
                     item.url
@@ -1064,7 +1072,7 @@ export default class CVElement extends LitElement {
                 </ul>
               </div>`}
           <div class="langs">
-            <h3>${this.wording.presentation.langs.title}</h3>
+            <h2>${this.wording.presentation.langs.title}</h2>
             <ul>
               ${this.wording.presentation.langs.content.map(
                 (lang) => html`<li>${lang}</li>`
