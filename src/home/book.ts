@@ -35,11 +35,13 @@ export class AppBookElement extends LitElement {
       <h1>${msg(str`Book`)}</h1>
       <figure class="book-container">
         <img
-          src="./images/eni-dpawm-cover_320.jpg"
+          src="./images/eni-dpawm-cover.jpg"
           alt="${msg(str`cover of the book, title in french:`) +
           ' "Développement et Architecture des Applications Web Modernes"' +
           msg(str`, ENI Editions`)}"
-          height="320"
+          style="aspect-ratio: 0.825 / 1"
+          height="200"
+          width="165"
         />
         <figcaption>
           <h2>
