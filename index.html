@@ -65,16 +65,12 @@
         <nmc-social></nmc-social>
       </section>
       <section id="contact">
-        <h1>Contact</h1>
-        <p>To get in touch fill the form below.</p>
-        <form name="contactForm" method="POST" netlifyhoneypot="bot-field" data-netlify="true">
-          <label class="screen-reader-text">Don't fill this out if you're human: <input name="bot-field" /></label>
-          <input type="text" name="name" placeholder="Name" aria-label="Name" required />
-          <input type="email" name="email" placeholder="Email" aria-label="Email" required />
-          <textarea name="message" placeholder="Message" rows="7" aria-label="Message" required></textarea>
-          <div class="form-row"><img src="/images/asterisk.svg" height="10px" width="10px" alt="*" /> Required fields</div>
-          <div class="form-row"><button type="submit">Send Message</button></div>
+        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
         </form>
+        <nmc-contact-form></nmc-contact-form>
       </section>
       <section id="writings">
         <h1>Livre (fr)</h1>
