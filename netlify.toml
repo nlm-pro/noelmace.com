@@ -1,7 +1,7 @@
 [build]
-  command = "npm run build"
-  base = "/"
-  publish = "build"
+command = "npm run build"
+base = "/"
+publish = "build"
 
 [[plugins]]
-  package = "@netlify/plugin-lighthouse"
+package = "@netlify/plugin-lighthouse"
