@@ -18,6 +18,34 @@
   <source>Career</source>
   <target>Parcours</target>
 </trans-unit>
+<trans-unit id="s87bae2710b2492c3">
+  <source>Contact</source>
+  <target>Contact</target>
+</trans-unit>
+<trans-unit id="s8abb914af20a06d1">
+  <source>To get in touch fill the form below</source>
+  <target>Remplissez le formulaire suivant pour m'envoyer un message</target>
+</trans-unit>
+<trans-unit id="sef49aec68fd1dc66">
+  <source>Name</source>
+  <target>Nom</target>
+</trans-unit>
+<trans-unit id="sd1f44f1a8bc20e67">
+  <source>Email</source>
+  <target>E-mail</target>
+</trans-unit>
+<trans-unit id="s35bc181321cbb52d">
+  <source>Required fields</source>
+  <target>Champs obligatoires</target>
+</trans-unit>
+<trans-unit id="s3885447847c7efbc">
+  <source>Send Message</source>
+  <target>Envoyer</target>
+</trans-unit>
+<trans-unit id="se240a335b3a7d81a">
+  <source>Message...</source>
+  <target>Message ...</target>
+</trans-unit>
 </body>
 </file>
 </xliff>

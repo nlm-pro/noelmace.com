@@ -1,8 +1,10 @@
 import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {homeStyles} from './styles';
+import { localized, msg, str } from '@lit/localize';
 
 @customElement('nmc-contact-form')
+@localized()
 export class AppContactFormElement extends LitElement {
   static override styles = [
     homeStyles,
@@ -78,8 +80,8 @@ export class AppContactFormElement extends LitElement {
 
   override render() {
     return html`
-      <h1>Contact</h1>
-      <p>To get in touch fill the form below.</p>
+      <h1>${msg(str`Contact`)}</h1>
+      <p>${msg(str`To get in touch fill the form below`)}.</p>
       <form
         name="contact"
         method="post"
@@ -93,29 +95,29 @@ export class AppContactFormElement extends LitElement {
         <input
           type="text"
           name="name"
-          placeholder="Name"
-          aria-label="Name"
+          placeholder="${msg(str`Name`)}"
+          aria-label="${msg(str`Name`)}"
           required
         />
         <input
           type="email"
           name="email"
-          placeholder="Email"
-          aria-label="Email"
+          placeholder="${msg(str`Email`)}"
+          aria-label="${msg(str`Email`)}"
           required
         />
         <textarea
           name="message"
-          placeholder="Message"
+          placeholder="${msg(str`Message...`)}"
           rows="7"
-          aria-label="Message"
+          aria-label="${msg(str`Message...`)}"
           required
         ></textarea>
         <div class="form-row">
           <img src="/images/asterisk.svg" height="10px" width="10px" alt="*" />
-          Required fields
+          ${msg(str`Required fields`)}
         </div>
-        <div class="form-row"><button type="submit">Send Message</button></div>
+        <div class="form-row"><button type="submit">${msg(str`Send Message`)}</button></div>
       </form>
     `;
   }
