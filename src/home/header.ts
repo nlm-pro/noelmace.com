@@ -1,5 +1,5 @@
 import {localized, msg, str} from '@lit/localize';
-import {LitElement, html} from 'lit';
+import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 
 import type {
@@ -19,6 +19,35 @@ export class AppHeaderElement extends LitElement {
     'meta[name="msapplication-TileColor"]'
   )!;
 
+  static override styles = css`
+    header {
+      background-color: var(--primary-color);
+      color: var(--font-on-primary);
+      text-align: left;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      box-shadow: var(--raise-4dp);
+      background-color: var(--primary-color);
+      color: var(--font-on-primary);
+    }
+
+    .spacer {
+      flex-grow: 1;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    locale-picker {
+      margin-right: 1rem;
+    }
+  `;
+
   override render() {
     return html`
       <header>
@@ -32,11 +61,6 @@ export class AppHeaderElement extends LitElement {
         ></dark-mode-toggle>
       </header>
     `;
-  }
-
-  // disable shadow-dom as dark-mode can't work inside it
-  protected override createRenderRoot() {
-    return this;
   }
 
   toggleTheme(e: ColorSchemeChangeEvent) {
