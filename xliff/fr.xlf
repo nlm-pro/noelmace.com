@@ -46,6 +46,22 @@
   <source>Message...</source>
   <target>Message ...</target>
 </trans-unit>
+<trans-unit id="sf7bdcea7c8207cb8">
+  <source>Book</source>
+  <target>Livre</target>
+</trans-unit>
+<trans-unit id="s46fc2f2744b888d4">
+  <source>, ENI Editions</source>
+  <target>éditions ENI</target>
+</trans-unit>
+<trans-unit id="s670afa02f8d2d07f">
+  <source>Seven chapter and more than 600 pages to learn or relearn Web development fundamentals in a new way.</source>
+  <target>Redécouvrez en sept chapitres les fondamentaux de développement Web comme vous ne les aviez jamais abordés auparavant.</target>
+</trans-unit>
+<trans-unit id="s1caf60dad83521d4">
+  <source>cover of the book, title in french:</source>
+  <target>couverture du livre : </target>
+</trans-unit>
 </body>
 </file>
 </xliff>

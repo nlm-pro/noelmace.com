@@ -1,8 +1,10 @@
 import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {homeStyles} from './styles';
+import {localized, msg, str} from '@lit/localize';
 
 @customElement('nmc-book')
+@localized()
 export class AppBookElement extends LitElement {
   static override styles = [
     homeStyles,
@@ -30,11 +32,13 @@ export class AppBookElement extends LitElement {
   ];
   override render() {
     return html`
-      <h1>Livre (fr)</h1>
+      <h1>${msg(str`Book`)}</h1>
       <figure class="book-container">
         <img
           src="./images/eni-dpawm-cover_320.jpg"
-          alt="développement et architecture des applications web modernes, éditions ENI"
+          alt="${msg(str`cover of the book, title in french:`) +
+          ' "Développement et Architecture des Applications Web Modernes"' +
+          msg(str`, ENI Editions`)}"
           height="320"
         />
         <figcaption>
@@ -47,8 +51,9 @@ export class AppBookElement extends LitElement {
             >
           </h2>
           <p>
-            Redécouvrez en sept chapitres les fondamentaux de développement Web
-            comme vous ne les aviez jamais abordés auparavant.
+            ${msg(
+              str`Seven chapter and more than 600 pages to learn or relearn Web development fundamentals in a new way.`
+            )}
           </p>
         </figcaption>
       </figure>
