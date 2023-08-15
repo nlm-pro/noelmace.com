@@ -3,6 +3,7 @@ import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 import {classMap} from 'lit/directives/class-map.js';
 import type {ExperienceWording} from './wording';
 import { customElement, property, state } from 'lit/decorators.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 @customElement('nmc-cv-experience')
 export class CVExperienceElement extends LitElement {
@@ -55,7 +56,7 @@ export class CVExperienceElement extends LitElement {
                     'short-line': !!item.shortLine,
                   })}
                 >
-                  <img src=${item.icon} alt=${item.company} />
+                  <img src=${item.icon} alt=${ifDefined(item.company?.name)} />
                 </div>
                 <div class="timeline__event__card">
                   <div class="timeline__event__date">

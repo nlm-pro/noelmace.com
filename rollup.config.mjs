@@ -44,5 +44,12 @@ export default {
     dir: 'build',
   },
 
+  onwarn: function (message, warn) {
+    if (/Circular dependency.*@lit\/localize/.test(message)) {
+      return;
+    }
+    warn(message);
+  },
+
   preserveEntrySignatures: 'strict',
 };

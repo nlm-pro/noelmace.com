@@ -1,5 +1,6 @@
 import {LitElement, html} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import {ifDefined} from 'lit/directives/if-defined.js';
 
 @customElement('optimized-img')
 export class OptimizedImgComponent extends LitElement {
@@ -34,9 +35,9 @@ export class OptimizedImgComponent extends LitElement {
       Object.keys(this.supportedExtensions).includes(this.srcExtension)
       ? html`<picture>
           <source srcset="${this.webp}" type="image/webp" />
-          <source srcset="${this.src}" type="${this.srcType}" />
+          <source srcset="${this.src}" type="${this.srcType!}" />
           <img src="${this.src}" alt="${this.alt}" />
         </picture>`
-      : html`<img src=${this.src} alt="${this.alt} aria-label="${this.ariaLabel}" />`;
+      : html`<img src=${this.src} alt="${this.alt}" aria-label=${ifDefined(this.ariaLabel ?? undefined)} />`;
   }
 }
