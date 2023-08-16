@@ -216,6 +216,11 @@
         min-height: var(--header-content-height);
       }
 
+      header h1 a {
+        color: var(--font-on-primary);
+        text-decoration: none;
+      }
+
       locale-picker {
         margin-inline: 1rem;
       }
@@ -285,7 +290,7 @@
   </head>
   <body>
     <header>
-      <h1>Noël Macé</h1>
+      <h1><a href="/">Noël Macé</a></h1>
       <div class="spacer"></div>
       <locale-picker></locale-picker>
       <nmc-theme-toggle></nmc-theme-toggle>
