@@ -8,7 +8,7 @@ const mode = process.env.MODE || 'dev';
 export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
   nodeResolve: {exportConditions: mode === 'dev' ? ['development'] : []},
   rootDir: mode === 'dev' ? '.' : 'build/',
-  open: '/',
+  // open: '/',
   watch: !hmr,
 
   /** Compile JS for older browsers. Requires @web/dev-server-esbuild plugin */

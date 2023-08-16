@@ -14,7 +14,7 @@ export const homeStyles = css`
   }
 
   h1 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
     padding: 1rem;
   }
@@ -22,7 +22,11 @@ export const homeStyles = css`
   h2 {
     font-size: 16px;
     font-weight: 700;
-    padding: 1rem;
+    padding: 1rem 0;
+  }
+
+  h1:first-child, h2:first-child {
+    padding-top: 0;
   }
 
   a {

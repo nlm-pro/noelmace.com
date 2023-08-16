@@ -5,6 +5,7 @@ import type {ExperienceWording} from './wording';
 import { customElement, property, state } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
+import '../shared/optimized-img';
 @customElement('nmc-cv-experience')
 export class CVExperienceElement extends LitElement {
   @state()
@@ -56,7 +57,8 @@ export class CVExperienceElement extends LitElement {
                     'short-line': !!item.shortLine,
                   })}
                 >
-                  <img src=${item.icon} alt=${ifDefined(item.company?.name)} />
+                  <optimized-img
+                   src=${item.icon} webp=${ifDefined(item.webp)} alt=${ifDefined(item.company?.name)} height="60" width="60" ></optimized-img>
                 </div>
                 <div class="timeline__event__card">
                   <div class="timeline__event__date">

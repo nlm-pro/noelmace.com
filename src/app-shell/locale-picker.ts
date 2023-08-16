@@ -1,6 +1,6 @@
 import {LitElement, TemplateResult, css, html} from 'lit';
 import {customElement, state} from 'lit/decorators.js';
-import {Locale, getLocale, setInitialLocale, setLocaleFromUrl} from './localization';
+import {Locale, getLocale, setInitialLocale, setLocaleFromUrl} from '../shared/localization';
 import {allLocales} from '../generated/locale-codes';
 import {localized} from '@lit/localize';
 import {until} from 'lit/directives/until.js';
