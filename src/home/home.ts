@@ -4,10 +4,12 @@ import './book';
 import {LitElement, css, html} from 'lit';
 import {homeStyles} from './styles';
 import {customElement} from 'lit/decorators.js';
+import { resetStyles } from '../shared/styles/reset';
 
 @customElement('nmc-home')
-export class HomeViewElement extends LitElement {
+export default class HomeViewElement extends LitElement {
   static override styles = [
+    resetStyles,
     homeStyles,
     css`
       :host {

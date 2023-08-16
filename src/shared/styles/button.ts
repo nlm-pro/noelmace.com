@@ -1,6 +1,6 @@
 import {css} from 'lit';
 
-export const sharedStyles = css`
+export const buttonSyles = css`
   button, .button {
     position: relative;
     overflow: hidden;

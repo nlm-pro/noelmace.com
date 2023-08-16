@@ -161,12 +161,6 @@
         background-color: var(--color-lvl0);
       }
 
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
-      }
-
       body,
       h1,
       h2,
@@ -181,10 +175,6 @@
         padding: 0;
         font-weight: normal;
         font-size: var(--font-size);
-      }
-
-      html {
-        box-sizing: border-box;
       }
 
       body {
@@ -224,6 +214,11 @@
         font-size: 20px;
         margin: 0;
         min-height: var(--header-content-height);
+      }
+
+      header h1 a {
+        color: var(--font-on-primary);
+        text-decoration: none;
       }
 
       locale-picker {
@@ -295,15 +290,15 @@
   </head>
   <body>
     <header>
-      <h1>Noël Macé</h1>
+      <h1><a href="/">Noël Macé</a></h1>
       <div class="spacer"></div>
       <locale-picker></locale-picker>
       <nmc-theme-toggle></nmc-theme-toggle>
     </header>
     <main>
-      <nmc-home>
+      <router-outlet>
         <div class="spinner">Loading...</div>
-      </nmc-home>
+      </router-outlet>
     </main>
     <script type="module" src="./dist/app-shell/index.js"></script>
     <script type="module" src="./dist/home/home.js"></script>

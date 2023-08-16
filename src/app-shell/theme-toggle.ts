@@ -5,7 +5,7 @@ import {customElement} from 'lit/decorators.js';
 import type {ColorSchemeChangeEvent} from 'dark-mode-toggle/src/dark-mode-toggle';
 
 import 'dark-mode-toggle';
-import {sharedStyles} from '../shared/styles';
+import {buttonSyles} from '../shared/styles/button';
 
 @customElement('nmc-theme-toggle')
 @localized()
@@ -18,7 +18,7 @@ export class AppThemeToggle extends LitElement {
   )!;
 
   static override styles = [
-    sharedStyles,
+    buttonSyles,
     css`
       dark-mode-toggle {
         height: var(--header-content-height);
