@@ -1,5 +1,6 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import {ifDefined} from 'lit/directives/if-defined.js';
 
 import '../shared/optimized-img';
 
@@ -18,16 +19,16 @@ export class CardComponent extends LitElement {
   webp: string = '';
 
   @property({
-    attribute: 'color-scheme'
+    attribute: 'color-scheme',
   })
   colorScheme: string = 'light';
 
   @property({
-    attribute: 'title'
+    attribute: 'title',
   })
-  cardTitle: string =  'Lorem Ispum';
+  cardTitle: string = 'Lorem Ispum';
 
-  @property({ attribute: 'subtitle'})
+  @property({attribute: 'subtitle'})
   cardSubTitle: string = 'dolor sit amet';
 
   @property()
@@ -80,14 +81,22 @@ export class CardComponent extends LitElement {
     `;
   }
 
+  get isExternal() {
+    const anchor = document.createElement('a');
+    anchor.href = this.href;
+    return anchor.host !== window.location.host;
+  }
+
   override render() {
     return html`
       <div class="container">
         <a
           href="${this.href}"
           aria-label="${this.label}"
-          target="_blank"
-          rel="noopener noreferrer"
+          target="${ifDefined(this.isExternal ? '_blank' : undefined)}"
+          rel="${ifDefined(
+            this.isExternal ? 'noopener noreferrer' : undefined
+          )}"
         >
           <slot
             ><optimized-img
