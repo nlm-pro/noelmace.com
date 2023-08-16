@@ -132,13 +132,13 @@ const timelineStyle = css`
     height: 40px;
     position: relative;
   }
+
   .timeline__event__icon img {
-    width: 60px;
-    height: 60px;
     border-radius: 100%;
     border: solid 2px var(--primary-color);
     background-color: #fff;
   }
+
   .timeline__event__icon:before {
     content: '';
     width: 2px;

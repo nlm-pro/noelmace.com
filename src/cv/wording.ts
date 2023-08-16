@@ -10,6 +10,7 @@ export interface ExperienceItemWording {
   details?: string[] | string;
   shortLine?: boolean;
   icon: string;
+  webp?: string;
 }
 
 export interface ExperienceWording {
@@ -291,6 +292,7 @@ export const wording: CVWording = {
           startDate: 'avr. 2019',
           endDate: 'oct. 2019',
           icon: '/images/companies-logos/bonitasoft.png',
+          webp: '/images/companies-logos/bonitasoft.webp',
           details: [
             "Mission : améliorer la satisfaction utilisateur et l'image de marque des produits Bonitasoft impliquant des technologies Web",
             '<strong>Modernisation et performance</strong> : contribution et accompagnement à une transition de <em>AngularJS</em> aux <em>Web Components</em>',
@@ -303,6 +305,7 @@ export const wording: CVWording = {
           startDate: 'juin 2018',
           endDate: 'avr. 2019',
           icon: '/images/companies-logos/sfeir.jpg',
+          webp: '/images/companies-logos/sfeir.webp',
           details: [
             '<strong>Double mission</strong> : expertise technique (3j/5) et advocacy',
             "Stabilisation et amélioration de la maintenabilité d'une application <strong>Angular, NgRx et Preact</strong> en tant que tech lead pour la Société Générale",
@@ -319,6 +322,7 @@ export const wording: CVWording = {
           startDate: 'déc. 2015',
           endDate: 'mai 2018',
           icon: '/images/companies-logos/sedona.png',
+          webp: '/images/companies-logos/sedona.webp',
           details: [
             '<strong>Direction technique de 8 projets</strong> front-end JavaScript (AngularJS, JQuery, PHP et Node.js) menés par 3 équipe de 12 développeurs',
             "Définition de l'architecture front-end web de référence pour Sedona ainsi que le groupe <em>Harmonie Mutuelle</em>",
@@ -332,6 +336,7 @@ export const wording: CVWording = {
           startDate: 'juin 2015',
           endDate: 'nov. 2015',
           icon: '/images/companies-logos/fdj.png',
+          webp: '/images/companies-logos/fdj.webp',
           details: `Développement des "widgets" de gestion de compte et de l'Euromillions en <strong>AngularJS 1.4 et ES2015</strong> pour le portail fdj.fr, au sein d'une équipe de 8 développeurs.`,
           shortLine: true,
         },
@@ -341,6 +346,7 @@ export const wording: CVWording = {
           startDate: 'mai 2011',
           endDate: 'nov. 2015',
           icon: '/images/companies-logos/nmc.png',
+          webp: '/images/companies-logos/nmc.webp',
           details: [
             '<strong>38 formations</strong> délivrées en ligne et présentiel',
             '<strong>3 applications</strong> Java (Spring, Struts, Hibernate) & Android développées',
@@ -353,6 +359,7 @@ export const wording: CVWording = {
           startDate: 'juin 2010',
           endDate: 'avr. 2011',
           icon: '/images/companies-logos/supinfo.jpg',
+          webp: '/images/companies-logos/supinfo.webp',
           details: [
             "<strong>70 formateurs recrutés</strong> et formés pour l'enseignement de <strong>3 matières (Linux, Apple & Sécurité)</strong> sur les 30 sites du groupe à l'international",
             '<strong>7 unités pédagogiques</strong> définies, rédigées et encadrées',
@@ -365,6 +372,7 @@ export const wording: CVWording = {
           startDate: 'oct. 2009',
           endDate: 'juin 2010',
           icon: '/images/companies-logos/supinfo.jpg',
+          webp: '/images/companies-logos/supinfo.webp',
           details:
             '12 unités pégagogiques enseignées sur 18 sites dans<br />3 pays (+ DOM)',
           shortLine: true,
