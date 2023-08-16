@@ -1,5 +1,6 @@
 import {LitElement, TemplateResult, html} from 'lit';
 import {customElement, state} from 'lit/decorators.js';
+import {until} from 'lit/directives/until.js';
 
 export interface Route {
   path: RegExp;
@@ -24,7 +25,7 @@ export class RouterOutletElement extends LitElement {
   }
 
   @state()
-  private currentRoute?: Route;
+  private loadingTemplate: Promise<unknown> = Promise.resolve();
 
   override connectedCallback(): void {
     super.connectedCallback();
@@ -32,16 +33,17 @@ export class RouterOutletElement extends LitElement {
   }
 
   override render() {
-    return this.currentRoute?.template;
+    return until(this.loadingTemplate, html`<slot></slot>`)
   }
 
-  private async navigate(path: string) {
+  private navigate(path: string) {
     const route = this.routes.find((route) => path.match(route.path));
     if (route) {
       if (route.loader) {
-        await route.loader();
+        this.loadingTemplate = route.loader().then(() => route.template);
+      } else {
+        this.loadingTemplate = Promise.resolve(route.template);
       }
-      this.currentRoute = route;
     }
   }
 }
