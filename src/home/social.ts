@@ -36,7 +36,7 @@ export class AppSocialElement extends LitElement {
       <div class="cards-container">
         <link-card
           id="cv"
-          href="./cv.html"
+          href="/cv"
           label="CV"
           alt="CV"
           title="CV"

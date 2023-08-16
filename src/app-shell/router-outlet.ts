@@ -32,6 +32,11 @@ export interface NavigationOptions {
 export class RouterOutletElement extends LitElement {
   private routes: Route[] = [
     {
+      path: /^\/cv/,
+      template: html`<nmc-cv></nmc-cv>`,
+      loader: () => import('../cv/cv.js'),
+    },
+    {
       // defining a default route is mandatory as their isn't any navigation
       // fallback in case the current path doesn't match any route
       path: /.*/,

@@ -1,1 +1,0 @@
-export {CVElement} from './cv';
