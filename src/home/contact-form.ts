@@ -2,13 +2,13 @@ import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {homeStyles} from './styles';
 import {localized, msg, str} from '@lit/localize';
-import {sharedStyles} from '../shared/styles';
+import {buttonSyles} from '../shared/styles/button';
 
 @customElement('nmc-contact-form')
 @localized()
 export class AppContactFormElement extends LitElement {
   static override styles = [
-    sharedStyles,
+    buttonSyles,
     homeStyles,
     css`
       form {
