@@ -17,6 +17,7 @@
   --link-card-bg-color-hover: var(--primary-color-light);
   --button-hover-bg-color: var(--primary-color-light);
   --light-on-primary: var(--color-lvl4);
+  --spinner-animation-color: rgba(255, 255, 255, 0.2);
 }
 
 section {

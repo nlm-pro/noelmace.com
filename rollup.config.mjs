@@ -13,6 +13,7 @@ export default {
     // HTML files for non-SPA app
     html({
       input: '*.html',
+      minify: true,
     }),
 
     // Resolve bare module specifiers to relative paths

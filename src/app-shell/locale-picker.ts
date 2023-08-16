@@ -20,15 +20,17 @@ export class LocalePicker extends LitElement {
       background-color: var(--light-on-primary);
       color: var(--font-on-primary);
       border-radius: 0;
+      border-radius: var(--action-border-radius);
     }
     
     .select {
       box-shadow: var(--raise-2dp);
       position: relative;
+      height: var(--header-content-height);
     }
 
     select {
-      padding: 5px .5rem;
+      padding: 5px 14px;
       appearance: none;
       border: none;
       outline: none;

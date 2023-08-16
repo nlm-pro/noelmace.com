@@ -1,12 +1,14 @@
 import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {homeStyles} from './styles';
-import { localized, msg, str } from '@lit/localize';
+import {localized, msg, str} from '@lit/localize';
+import {sharedStyles} from '../shared/styles';
 
 @customElement('nmc-contact-form')
 @localized()
 export class AppContactFormElement extends LitElement {
   static override styles = [
+    sharedStyles,
     homeStyles,
     css`
       form {
@@ -64,6 +66,8 @@ export class AppContactFormElement extends LitElement {
         font-weight: 600;
         box-shadow: var(--raise-2dp);
         transition: var(--raise-transition);
+        background-color: var(--primary-color);
+        cursor: pointer;
       }
 
       @media (max-width: 1199px) {
@@ -117,7 +121,9 @@ export class AppContactFormElement extends LitElement {
           <img src="/images/asterisk.svg" height="10px" width="10px" alt="*" />
           ${msg(str`Required fields`)}
         </div>
-        <div class="form-row"><button type="submit">${msg(str`Send Message`)}</button></div>
+        <div class="form-row">
+          <button type="submit">${msg(str`Send Message`)}</button>
+        </div>
       </form>
     `;
   }
