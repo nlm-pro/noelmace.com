@@ -6,6 +6,7 @@ import terser from '@rollup/plugin-terser';
 import minifyHTML from 'rollup-plugin-minify-html-literals';
 import summary from 'rollup-plugin-summary';
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
+import litcss from 'rollup-plugin-lit-css';
 
 export default {
   plugins: [
@@ -16,10 +17,13 @@ export default {
       minify: true,
     }),
 
+    litcss(),
+    
     // Resolve bare module specifiers to relative paths
     resolve(),
 
     dynamicImportVars(),
+
 
     // Minify HTML template literals
     // see https://github.com/asyncLiz/rollup-plugin-minify-html-literals/issues/24
