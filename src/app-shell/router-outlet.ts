@@ -1,6 +1,7 @@
 import {LitElement, TemplateResult, html} from 'lit';
 import {customElement, state} from 'lit/decorators.js';
 import {until} from 'lit/directives/until.js';
+import {clickEventHandler} from './clickevent-handler.js';
 
 export interface Route {
   path: RegExp;
@@ -48,6 +49,10 @@ export class RouterOutletElement extends LitElement {
 
   override connectedCallback(): void {
     super.connectedCallback();
+    document.body.addEventListener(
+      'click',
+      clickEventHandler('/')((path, event) => this.navigate(path, {event}))
+    );
     this.navigate(this.currentPath, {skipLocationChange: true});
     window.addEventListener('popstate', (event) => {
       this.navigate(this.currentPath, {
