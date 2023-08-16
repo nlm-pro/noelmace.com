@@ -47,6 +47,10 @@ export class OptimizedImgComponent extends LitElement {
     return match && match[1];
   }
 
+  override createRenderRoot() {
+    return this;
+  }
+
   override render() {
     return this.webp &&
       Object.keys(this.supportedExtensions).includes(this.srcExtension)
