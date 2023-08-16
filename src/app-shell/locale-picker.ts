@@ -73,7 +73,7 @@ export class LocalePicker extends LitElement {
     if (newLocale !== getLocale()) {
       const url = new URL(window.location.href);
       url.searchParams.set('locale', newLocale);
-      window.history.pushState(null, '', url.toString());
+      window.history.pushState("[NMC] locale-change", '', url.toString());
       setLocaleFromUrl();
     }
   }
