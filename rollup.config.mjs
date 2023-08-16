@@ -37,7 +37,7 @@ export default {
 
     // Optional: copy any static assets to build directory
     copy({
-      patterns: ['images/**/*', 'cv.pdf'],
+      patterns: ['images/**/*', '_redirects', 'cv.pdf'],
     })
   ],
 
