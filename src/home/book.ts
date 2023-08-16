@@ -15,10 +15,6 @@ export class AppBookElement extends LitElement {
         text-decoration: none !important;
       }
 
-      .book-container img {
-        max-height: 200px;
-      }
-
       @media (min-width: 1200px) {
         .book-container {
           display: grid;
@@ -27,6 +23,12 @@ export class AppBookElement extends LitElement {
           justify-items: center;
           margin: 1rem 0.5rem;
           gap: 1rem;
+        }
+      }
+
+      @media screen and (max-width: 1199px) {
+        figcaption {
+          margin-top: 1rem;
         }
       }
     `,
