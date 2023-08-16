@@ -226,6 +226,58 @@
       locale-picker {
         margin-inline: 1rem;
       }
+
+      .spinner {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: var(--font-color);
+        color: var(--font-color);
+        animation: spinner 1s infinite linear alternate;
+        animation-delay: 0.5s;
+        top: 200px;
+        left: 50%;
+        text-indent: -9999em;
+
+      }
+      .spinner::before,
+      .spinner::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+      }
+      .spinner::before {
+        left: -15px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: var(--font-color);
+        color: var(--font-color);
+        animation: spinner 1s infinite alternate;
+        animation-delay: 0s;
+      }
+      .spinner::after {
+        left: 15px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: var(--font-color);
+        color: var(--font-color);
+        animation: spinner 1s infinite alternate;
+        animation-delay: 1s;
+      }
+
+      @keyframes spinner {
+        0% {
+          background-color: var(--font-color);
+        }
+        50%,
+        100% {
+          background-color: var(--spinner-animation-color);
+        }
+      }
     </style>
     <script defer nomodule src="./js/nomodule.js"></script>
   </head>
@@ -237,7 +289,9 @@
       <nmc-theme-toggle></nmc-theme-toggle>
     </header>
     <main>
-      <nmc-home></nmc-home>
+      <nmc-home>
+        <div class="spinner">Loading...</div>
+      </nmc-home>
     </main>
     <script type="module" src="./dist/app-shell/index.js"></script>
     <script type="module" src="./dist/home/home.js"></script>
