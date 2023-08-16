@@ -6,7 +6,7 @@ import {homeStyles} from './styles';
 import {customElement} from 'lit/decorators.js';
 
 @customElement('nmc-home')
-export class HomeViewElement extends LitElement {
+export default class HomeViewElement extends LitElement {
   static override styles = [
     homeStyles,
     css`
