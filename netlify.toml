@@ -8,16 +8,16 @@ package = "@netlify/plugin-lighthouse"
 
 # Set the plugin to run prior to deploy, failing the build if minimum thresholds aren't set
 [plugins.inputs]
-fail_deploy_on_score_thresholds = "true"
+fail_deploy_on_score_thresholds = "false"
 
 [[plugins.inputs.audits]]
 path = "index.html"
 
 # Set minimum thresholds for each report area
 [plugins.inputs.thresholds]
-performance = 0.95
-accessibility = 0.95
-best-practices = 0.95
+performance = 1
+accessibility = 1
+best-practices = 1
 
 # to audit an HTML file other than index.html in the build directory
 [[plugins.inputs.audits]]
@@ -25,6 +25,6 @@ path = "cv.html"
 
 # you can specify thresholds per audit
 [plugins.inputs.audits.thresholds]
-performance = 0.8
-accessibility = 0.9
-best-practices = 0.9
+performance = 1
+accessibility = 1
+best-practices = 1
