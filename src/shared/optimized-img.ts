@@ -14,10 +14,27 @@ export class OptimizedImgComponent extends LitElement {
   src: string = '';
 
   @property()
-  webp: string = '';
+  webp?: string;
 
   @property()
-  alt: string = '';
+  alt?: string;
+
+  @property({type: Number})
+  height?: number;
+
+  @property({type: Number})
+  width?: number;
+
+  @property()
+  ratio?: string;
+
+  private get ratioStyle() {
+    let ratio = this.ratio;
+    if (!this.ratio && this.height !== undefined && this.width !== undefined) {
+      ratio = `${Math.floor(this.width * 1000 / this.height) / 1000} / 1`
+    }
+    return ratio && `aspect-ratio: ${ratio}`;
+  }
 
   get srcExtension() {
     return this.src?.split('.').pop() || '';
@@ -33,11 +50,22 @@ export class OptimizedImgComponent extends LitElement {
   override render() {
     return this.webp &&
       Object.keys(this.supportedExtensions).includes(this.srcExtension)
-      ? html`<picture>
+      ? html`<picture
+          height=${ifDefined(this.height)}
+          width=${ifDefined(this.width)}
+          style=${ifDefined(this.ratioStyle)}
+        >
           <source srcset="${this.webp}" type="image/webp" />
           <source srcset="${this.src}" type="${this.srcType!}" />
-          <img src="${this.src}" alt="${this.alt}" />
+          <img src="${this.src}" alt="${ifDefined(this.alt)}" />
         </picture>`
-      : html`<img src=${this.src} alt="${this.alt}" aria-label=${ifDefined(this.ariaLabel ?? undefined)} />`;
+      : html`<img
+          src=${this.src}
+          alt="${ifDefined(this.alt)}"
+          aria-label=${ifDefined(this.ariaLabel ?? undefined)}
+          height=${ifDefined(this.height)}
+          width=${ifDefined(this.width)}
+          style=${ifDefined(this.ratioStyle)}
+        />`;
   }
 }
