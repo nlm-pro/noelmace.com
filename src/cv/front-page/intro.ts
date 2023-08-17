@@ -97,13 +97,14 @@ export class ResumeIntroElement extends WithWordings<
 
       @media print {
         .cv__intro__cta {
-          border: 1px solid var(--primary-color);
-          border-radius: 6px;
+          border: 1px solid var(--neutral-color-400);
+          border-radius: 5px;
+          padding: .5rem 1rem;
         }
 
         .cv__intro__cta img {
-          margin: 1rem;
-          height: 32px;
+          margin-block: .5rem;
+          height: 20px;
         }
       }
 

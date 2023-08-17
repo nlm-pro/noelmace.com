@@ -7,11 +7,11 @@ const urlLivreENI =
 export default {
   presentation: {
     name: 'Noël Macé',
-    jobTitle: 'Développeur/Architecte Web',
+    jobTitle: 'Développeur Web Senior',
     note: "14 ans d'expérience",
     abstract: [
       `D'un naturel passionné et investi, je recherche perpétuellement de nouveaux défis techniques, intellectuels et humains.`,
-      `Grâce à cela, j'ai au cours des années accumulé une expérience complète et variée dans de nombreux domaines, notamment: le développement et l'architecture applicative, l'administration système et réseaux, la pédagogie, le management et la communication.`,
+      `Grâce à cela, j'ai au cours des années accumulé une expérience complète et variée dans de nombreux domaines (développement et architecture applicative, administration système et réseaux, pédagogie, management, communication, etc.).`,
       `Depuis 2014, mon focus technique se porte essentiellement sur la plateforme Web, ses outils et ses standards.`,
     ],
     langs: {
@@ -24,6 +24,7 @@ export default {
     },
     networks: {
       title: 'Réseaux',
+      // title: 'Contacts',
       content: [
         // {
         //   icon: "/images/icons/mail.svg",
@@ -35,7 +36,6 @@ export default {
         //   icon: "/images/icons/phone.svg",
         //   alt: "Tel",
         //   text: "",
-
         //   url: "tel:",
         // },
         {
@@ -47,13 +47,13 @@ export default {
         // {
         //   icon: '/images/icons/github.svg',
         //   alt: 'GitHub',
-        //   text: 'nlm-pro',
+        //   text: '@nlm-pro',
         //   url: 'https://github.com/nlm-pro',
         // },
         // {
         //   icon: '/images/icons/github.svg',
         //   alt: 'GitHub',
-        //   text: 'xxx',
+        //   text: '@xxx',
         //   url: 'https://github.com/xxx',
         // },
         {
@@ -160,7 +160,7 @@ export default {
           jobTitle: 'VP, Technology & Pedagogy',
           details: [
             'Encadrement du développement Web, Java et Scala',
-            'Accompagnement client et rédaction de documentations',
+            'Accompagnement client et maintenance des documentations techniques',
             'Promotion de la privacy',
           ],
           icon: '/images/companies-logos/blindnet.svg',
@@ -183,7 +183,7 @@ export default {
                 ></a
               >
               (608 pages)`,
-            "16500 lignes de code d'exemple, testées et executables",
+            "16500 lignes de code d'exemple, testées et exécutables",
             'Développement de bibliothèques, outils, scripts et projets permettant de valider et appuyer la rédaction',
           ],
         },
@@ -294,7 +294,7 @@ export default {
       },
       {
         school: 'Université Toulouse Jean Jaurès',
-        diploma: 'DEUG Mathématiques Appliqués aux Sciences Sociales',
+        diploma: 'DEUG Mathématiques Appliquées aux Sciences Sociales',
         year: '2007',
       },
     ],
@@ -363,7 +363,7 @@ export default {
         ],
       },
       {
-        title: '15+ projets Open Source',
+        title: html`<span style="font-size: 32px; position: relative; top: +6px">∞</span> projets Open Source`,
         items: [
           {
             headline: 'CLIs',
@@ -375,7 +375,7 @@ export default {
             headline: 'Framework et bibliothèques de développment web',
           },
           {
-            headline: 'Démonstrations techniques et Proofs of Concepts',
+            headline: 'Expérimentations, Démonstrations techniques, Proofs of Concepts ...',
           },
         ],
       },
@@ -387,7 +387,8 @@ export default {
       'Logiciel Libre, Open Source & Ethical Source',
       'Pédagogie et vulgarisation scientifique',
       'Jeux de rôle et de société',
-      html`Sciences naturelles, sociales, politiques et&nbsp;cognitives`,
+      'Mathématiques et Physique théorique',
+      html`Sciences naturelles, sociales et&nbsp;cognitives`,
       'Legos, maquettes, puzzles',
     ],
   },
