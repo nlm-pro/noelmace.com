@@ -1,8 +1,8 @@
 import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {Constructor, WithWordings} from '../with-wordings.mixin';
-import { resumeStyles } from '../styles/common';
-import { lastPageStyles } from '../styles/last-page';
+import {resumeStyles} from '../styles/common';
+import {lastPageStyles} from '../styles/last-page';
 
 export interface ResumeAccomplishmentsWordings {
   title: string;
@@ -30,10 +30,6 @@ export class ResumeAccomplishmentsElement extends WithWordings<
     resumeStyles,
     lastPageStyles,
     css`
-      h2 {
-        margin-bottom: 1rem;
-      }
-
       .accomplishment:first-child h3 {
         margin-top: 0;
       }
@@ -48,10 +44,6 @@ export class ResumeAccomplishmentsElement extends WithWordings<
 
       .accomplishment {
         break-inside: avoid;
-      }
-
-      li {
-        margin: 0.2em 0;
       }
     `,
   ];

@@ -10,10 +10,6 @@ export const resumeStyles = css`
       text-decoration: none;
       color: inherit;
     }
-
-    .page-break {
-      break-after: page;
-    }
   }
 
   @media screen and (max-width: 786px) {

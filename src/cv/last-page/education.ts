@@ -1,8 +1,8 @@
-import {LitElement, css, html} from 'lit';
+import {LitElement, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {Constructor, WithWordings} from '../with-wordings.mixin';
-import { resumeStyles } from '../styles/common';
-import { lastPageStyles } from '../styles/last-page';
+import {resumeStyles} from '../styles/common';
+import {lastPageStyles} from '../styles/last-page';
 
 export interface ResumeEducationWordings {
   title: string;
@@ -19,19 +19,7 @@ export class ResumeEducationElement extends WithWordings<
   Constructor<LitElement>,
   ResumeEducationWordings
 >(LitElement) {
-  static styles = [
-    resumeStyles,
-    lastPageStyles,
-    css`
-      h2 {
-        margin-bottom: 1rem;
-      }
-
-      li {
-        margin: 0.2em 0;
-      }
-    `,
-  ];
+  static styles = [resumeStyles, lastPageStyles];
 
   override render() {
     return html`

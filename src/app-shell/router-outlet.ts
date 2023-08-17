@@ -1,4 +1,4 @@
-import {LitElement, TemplateResult, html} from 'lit';
+import {LitElement, TemplateResult, css, html} from 'lit';
 import {customElement, state} from 'lit/decorators.js';
 import {until} from 'lit/directives/until.js';
 import {clickEventHandler} from './clickevent-handler.js';
@@ -30,6 +30,16 @@ export interface NavigationOptions {
 
 @customElement('router-outlet')
 export class RouterOutletElement extends LitElement {
+  static override styles = [
+    css`
+      @media screen {
+        nmc-cv {
+          max-width: 936px;
+        }
+      }
+    `,
+  ];
+  
   private routes: Route[] = [
     {
       path: /^\/cv/,

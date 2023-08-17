@@ -30,7 +30,6 @@ export default class ResumeElement extends LitElement {
       :host {
         display: block;
         margin: 0 auto;
-        max-width: 936px;
         --primary-text-color: #444;
         --primary-text-color-stronger: #333;
         --primary-text-color-softer: #555;
@@ -75,6 +74,10 @@ export default class ResumeElement extends LitElement {
         margin-right: auto;
       }
 
+      nmc-cv-intro {
+        padding-bottom: 1rem;
+      }
+
       .last-page {
         padding-bottom: 1rem;
       }
@@ -91,9 +94,11 @@ export default class ResumeElement extends LitElement {
         @page {
           margin: 100cm !important;
         }
+
         :host {
           margin: 0;
         }
+
         .first-page,
         #cv__xp {
           break-after: page;
@@ -105,6 +110,11 @@ export default class ResumeElement extends LitElement {
           padding-right: 2rem;
         }
 
+        .first-page > *,
+        .first-page > * > * {
+          height: 100%;
+        }
+
         #cv__xp {
           height: 200vh;
           margin-top: 0;
@@ -112,6 +122,14 @@ export default class ResumeElement extends LitElement {
 
         #cv__education {
           margin-top: 0;
+        }
+
+        .last-page {
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 4rem 2rem;
         }
       }
 

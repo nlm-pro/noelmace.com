@@ -35,10 +35,8 @@ export class ResumeIntroElement extends WithWordings<
         display: flex;
         flex-direction: column;
         padding: 1rem 1rem 1rem 0;
-      }
-
-      :host > * {
-        margin-top: 15px;
+        height: 100%;
+        justify-content: space-between;
       }
 
       .cv__intro__item {

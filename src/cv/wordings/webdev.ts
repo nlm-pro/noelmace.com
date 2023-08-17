@@ -197,8 +197,7 @@ export default {
           icon: '/images/companies-logos/bonitasoft.png',
           webp: '/images/companies-logos/bonitasoft.webp',
           details: [
-            "Mission : améliorer la satisfaction utilisateur et l'image de marque des produits Bonitasoft impliquant des technologies Web",
-            '<strong>Modernisation et performance</strong> : contribution et accompagnement à une transition de <em>AngularJS</em> aux <em>Web Components</em>',
+            '<strong>Modernisation, DevX et performance</strong> : contribution et accompagnement à une transition de <em>AngularJS</em> aux <em>Web Components</em>',
             "Mise en place d'une stratégie et d'outils facilitant la production de contenus, ainsi que la gestion de 213 évènements (via Gatsby, Netlify CMS, GitHub)",
           ],
         },
@@ -214,7 +213,6 @@ export default {
             "Stabilisation et amélioration de la maintenabilité d'une application <strong>Angular, NgRx et Preact</strong> en tant que tech lead pour la Société Générale",
             "Encadrement et montée en compétence d'une équipe de <strong>30 développeurs Angular</strong> (Paris & Hong Kong) pour BNP Paribas",
             "Audit et amélioration des performances de Progressive Web Apps (Vanilla, React, Vue, Angular), migrations AngularJS-Angular, réponses à appels d'offre, etc.",
-            '8 conférences et 5 formations délivrées (cf. réalisations)',
           ],
         },
       ],

@@ -67,6 +67,13 @@ export class ResumeExperienceElement extends WithWordings<
       .dates {
         font-weight: initial;
       }
+
+      @media print { 
+        h2 {
+          margin-left: 2rem;
+          margin-top: 0;
+        }
+      }
     `,
   ];
 
