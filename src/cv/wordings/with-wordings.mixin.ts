@@ -1,8 +1,6 @@
 import { LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type Constructor<T = {}> = new (...args: any[]) => T;
+import { Constructor } from '../../shared/lit-dev';
 
 export declare class WithWordingsInterface<T> {
   wordings: T;

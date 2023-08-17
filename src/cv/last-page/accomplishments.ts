@@ -1,21 +1,22 @@
 import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
-import {Constructor, WithWordings} from '../with-wordings.mixin';
+import {WithWordings} from '../wordings/with-wordings.mixin';
 import {resumeStyles} from '../styles/common';
 import {lastPageStyles} from '../styles/last-page';
+import type {Constructor, litString} from '../../shared/lit-dev';
 
 export interface ResumeAccomplishmentsWordings {
-  title: string;
+  title: litString;
   groups: {
-    title: string;
+    title: litString;
     items: {
-      headline: string;
-      date?: string;
+      headline: litString;
+      date?: litString;
       links?: {
-        text: string;
+        text: litString;
         href?: string;
       }[];
-      context?: string;
+      context?: litString;
       href?: string;
     }[];
   }[];

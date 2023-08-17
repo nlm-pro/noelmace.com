@@ -1,13 +1,13 @@
 import {LitElement, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
-import {Constructor, WithWordings} from '../with-wordings.mixin';
-import {unsafeHTML} from 'lit/directives/unsafe-html.js';
+import {WithWordings} from '../wordings/with-wordings.mixin';
 import {resumeStyles} from '../styles/common';
 import {lastPageStyles} from '../styles/last-page';
+import type {Constructor, litString} from '../../shared/lit-dev';
 
 export interface ResumeMiscWordings {
-  title: string;
-  content: string[];
+  title: litString;
+  content: litString[];
 }
 
 @customElement('nmc-cv-misc')
@@ -21,7 +21,7 @@ export class ResumeMiscElement extends WithWordings<
     return html`
       <h2>${this.wordings.title}</h2>
       <ul class="lg-2-columns">
-        ${this.wordings.content.map((txt) => html`<li>${unsafeHTML(txt)}</li>`)}
+        ${this.wordings.content.map((txt) => html`<li>${txt}</li>`)}
       </ul>
     `;
   }

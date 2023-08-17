@@ -1,16 +1,16 @@
 import {LitElement, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
-import {Constructor, WithWordings} from '../with-wordings.mixin';
+import {WithWordings} from '../wordings/with-wordings.mixin';
 import {resumeStyles} from '../styles/common';
 import {lastPageStyles} from '../styles/last-page';
+import type {Constructor, litString} from '../../shared/lit-dev';
 
 export interface ResumeEducationWordings {
-  title: string;
+  title: litString;
   items: {
-    school?: string;
-    diploma: string;
-    year?: string;
-    title?: string;
+    school?: litString;
+    diploma: litString;
+    year?: litString;
   }[];
 }
 

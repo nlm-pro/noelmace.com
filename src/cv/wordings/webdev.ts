@@ -1,3 +1,4 @@
+import {html} from 'lit';
 import type {ResumeWordings} from '.';
 
 const urlLivreENI =
@@ -81,18 +82,17 @@ export default {
           caption: 'expertise',
         },
         content: [
-          /* HTML */ `Focus sur les
+          html`Focus sur les
             <strong>standards et principes transverses</strong> (Web Components,
             Web APIs, PWAs, PRPL, a11y, performances, etc.)`,
-          /* HTML */ `Maitrise de nombreux frameworks et bibliothèques (<strong
+          html`Maitrise de nombreux frameworks et bibliothèques (<strong
               >Lit, Open WC, Angular, React, Vue, Redux, Gatsby, 11ty,
               etc.</strong
             >)`,
-          /* HTML */ `Maitrise avancée de
+          html`Maitrise avancée de
             <strong>Angular, Angular CLI & Nrwl/Nx</strong> (contributeur de
             2016 à 2018, puis suivi&nbsp;régulier)`,
-          /* HTML */ `<strong>Livre</strong> complet sur les principes
-            fondamentaux de
+          html`<strong>Livre</strong> complet sur les principes fondamentaux de
             <em
               ><a
                 href="https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523"
@@ -102,8 +102,8 @@ export default {
               ></em
             >
             publié aux éditions ENI en 2021`,
-          /* HTML */ `Aptitudes fullstack et DevOps (REST, ORM, CI/CD, SGBD,
-          Docker, PaaS, Node.js, Python, Java, etc.)`,
+          html`Aptitudes fullstack et DevOps (REST, ORM, CI/CD, SGBD, Docker,
+          PaaS, Node.js, Python, Java, etc.)`,
         ],
       },
       {
@@ -113,12 +113,11 @@ export default {
           caption: 'ligne directrice',
         },
         content: [
-          /* HTML */ `<strong>Mentoring</strong> et
+          html`<strong>Mentoring</strong> et
             <strong>transmission de compétences</strong> sont les piliers et
             fils conducteurs de l'ensemble de ma&nbsp;carrière`,
-          /* HTML */ `Large expérience, en tant que formateur autonome et dans
-          la direction et l'accompagnement d'importantes équipes pédagogique ou
-          de R&D`,
+          html`Large expérience, en tant que formateur autonome et dans la
+          direction et l'accompagnement d'importantes équipes pédagogique et R&D`,
         ],
       },
       {
@@ -128,10 +127,12 @@ export default {
           caption: 'motivations',
         },
         content: [
-          /* HTML */ `Forte appétence pour l'<strong>Open Source</strong> et les
+          html`Forte appétence pour l'<strong>Open Source</strong> et les
             oeuvres&nbsp;libres`,
-          /* HTML */ `Nombreux <strong>workshops et conférences</strong> créés
+          html`Nombreux <strong>workshops et conférences</strong> créés
             et&nbsp;présentés`,
+          html`Matrise de nombreux outils et stratégies de
+            <strong>documentation, typage et testing</strong>`,
         ],
       },
     ],
@@ -167,14 +168,14 @@ export default {
         {
           company: {
             name: 'Editions ENI',
-            details: "maison d'édition de livres d'informatique",
+            details: "maison d'édition",
           },
           jobTitle: 'Auteur',
           startDate: 'mars 2020',
           endDate: 'mars 2021',
           icon: '/images/companies-logos/eni.svg',
           details: [
-            /* HTML */ `Rédaction du livre
+            html`Rédaction du livre
               <a href=${urlLivreENI} target="_blank" rel="noferrer noopener"
                 ><strong
                   >Développement et architecture des applications Web
@@ -197,7 +198,9 @@ export default {
           icon: '/images/companies-logos/bonitasoft.png',
           webp: '/images/companies-logos/bonitasoft.webp',
           details: [
-            '<strong>Modernisation, DevX et performance</strong> : contribution et accompagnement à une transition de <em>AngularJS</em> aux <em>Web Components</em>',
+            html`<strong>Modernisation, DevX et performance</strong> :
+              contribution et accompagnement à une transition de
+              <em>AngularJS</em> aux <em>Web Components</em>`,
             "Mise en place d'une stratégie et d'outils facilitant la production de contenus, ainsi que la gestion de 213 évènements (via Gatsby, Netlify CMS, GitHub)",
           ],
         },
@@ -209,9 +212,9 @@ export default {
           icon: '/images/companies-logos/sfeir.jpg',
           webp: '/images/companies-logos/sfeir.webp',
           details: [
-            '<strong>Double mission</strong> : expertise technique (3j/5) et advocacy',
-            "Stabilisation et amélioration de la maintenabilité d'une application <strong>Angular, NgRx et Preact</strong> en tant que tech lead pour la Société Générale",
-            "Encadrement et montée en compétence d'une équipe de <strong>30 développeurs Angular</strong> (Paris & Hong Kong) pour BNP Paribas",
+            html`<strong>Double mission</strong> : expertise technique (3j/5) et advocacy`,
+            html`Stabilisation et amélioration de la maintenabilité d'une application <strong>Angular, NgRx et Preact</strong> en tant que tech lead pour la Société Générale`,
+            html`Encadrement et montée en compétence d'une équipe de <strong>30 développeurs Angular</strong> (Paris & Hong Kong) pour BNP Paribas`,
             "Audit et amélioration des performances de Progressive Web Apps (Vanilla, React, Vue, Angular), migrations AngularJS-Angular, réponses à appels d'offre, etc.",
           ],
         },
@@ -225,10 +228,10 @@ export default {
           icon: '/images/companies-logos/sedona.png',
           webp: '/images/companies-logos/sedona.webp',
           details: [
-            '<strong>Direction technique de 8 projets</strong> front-end JavaScript (AngularJS, JQuery, PHP et Node.js) menés par 3 équipe de 12 développeurs',
-            "Définition de l'architecture front-end web de référence pour Sedona ainsi que le groupe <em>Harmonie Mutuelle</em>",
-            "<strong>Réponse à appels d'offre</strong> et <strong>modernisation</strong> de l'usage des technologies Web sur l'ensemble du groupe (marques Sedona, West, RedShift et Inadeo)",
-            "<em>(À partir de déc. 2016)</em> suivi, développement et mise en place des codes et outils transverses sur 3 projets, menés par 6 équipes (30 développeurs), en tant qu'<strong>architecte référant Angular</strong> pour le compte de <em>Saint Gobain</em>",
+            html`<strong>Direction technique de 8 projets</strong> front-end JavaScript (AngularJS, JQuery, PHP et Node.js) menés par 3 équipe de 12 développeurs`,
+            html`Définition de l'architecture front-end web de référence pour Sedona ainsi que le groupe <em>Harmonie Mutuelle</em>`,
+            html`<strong>Réponse à appels d'offre</strong> et <strong>modernisation</strong> de l'usage des technologies Web sur l'ensemble du groupe (marques Sedona, West, RedShift et Inadeo)`,
+            html`<em>(À partir de déc. 2016)</em> suivi, développement et mise en place des codes et outils transverses sur 3 projets, menés par 6 équipes (30 développeurs), en tant qu'<strong>architecte référant Angular</strong> pour le compte de <em>Saint Gobain</em>`,
           ],
         },
         {
@@ -238,7 +241,7 @@ export default {
           endDate: 'nov. 2015',
           icon: '/images/companies-logos/fdj.png',
           webp: '/images/companies-logos/fdj.webp',
-          details: `Développement des "widgets" de gestion de compte et de l'Euromillions en <strong>AngularJS 1.4 et ES2015</strong> pour le portail fdj.fr, au sein d'une équipe de 8 développeurs.`,
+          details: html`Développement des "widgets" de gestion de compte et de l'Euromillions en <strong>AngularJS 1.4 et ES2015</strong> pour le portail fdj.fr, au sein d'une équipe de 8 développeurs.`,
           shortLine: true,
         },
         {
@@ -249,8 +252,8 @@ export default {
           icon: '/images/companies-logos/nmc.png',
           webp: '/images/companies-logos/nmc.webp',
           details: [
-            '<strong>38 formations</strong> délivrées en ligne et présentiel',
-            '<strong>3 applications</strong> Java (Spring, Struts, Hibernate) & Android développées',
+            html`<strong>38 formations</strong> délivrées en ligne et présentiel`,
+            html`<strong>3 applications</strong> Java (Spring, Struts, Hibernate) & Android développées`,
           ],
           shortLine: true,
         },
@@ -262,8 +265,8 @@ export default {
           icon: '/images/companies-logos/supinfo.jpg',
           webp: '/images/companies-logos/supinfo.webp',
           details: [
-            "<strong>70 formateurs recrutés</strong> et formés pour l'enseignement de <strong>3 matières (Linux, Apple & Sécurité)</strong> sur les 30 sites du groupe à l'international",
-            '<strong>7 unités pédagogiques</strong> définies, rédigées et encadrées',
+            html`<strong>70 formateurs recrutés</strong> et formés pour l'enseignement de <strong>3 matières (Linux, Apple & Sécurité)</strong> sur les 30 sites du groupe à l'international`,
+            html`<strong>7 unités pédagogiques</strong> définies, rédigées et encadrées`,
           ],
           shortLine: true,
         },
@@ -275,7 +278,7 @@ export default {
           icon: '/images/companies-logos/supinfo.jpg',
           webp: '/images/companies-logos/supinfo.webp',
           details:
-            '12 unités pégagogiques enseignées sur 18 sites dans<br />3 pays (+ DOM)',
+            html`12 unités pégagogiques enseignées sur 18 sites dans<br />3 pays (+ DOM)`,
           shortLine: true,
         },
       ],
@@ -384,7 +387,7 @@ export default {
       'Logiciel Libre, Open Source & Ethical Source',
       'Pédagogie et vulgarisation scientifique',
       'Jeux de rôle et de société',
-      'Sciences naturelles, sociales, politiques et&nbsp;cognitives',
+      html`Sciences naturelles, sociales, politiques et&nbsp;cognitives`,
       'Legos, maquettes, puzzles',
     ],
   },

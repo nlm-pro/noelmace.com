@@ -1,31 +1,33 @@
 import {LitElement, css, html} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import {customElement} from 'lit/decorators.js';
 import type {ListSectionWording} from '../wordings';
-import { resumeStyles } from '../styles/common';
+import {resumeStyles} from '../styles/common';
+import {WithWordings} from '../wordings/with-wordings.mixin';
+import type {Constructor, litString} from '../../shared/lit-dev';
 
 export interface ResumePresentationWordings {
-  name: string;
-  jobTitle: string;
-  note: string;
-  abstract: string[];
+  name: litString;
+  jobTitle: litString;
+  note: litString;
+  abstract: litString[];
   langs: ListSectionWording;
   networks?: {
-    title: string;
+    title: litString;
     content: {
       icon: string;
       alt: string;
-      text: string;
+      text: litString;
       url?: string;
     }[];
   };
 }
 
 @customElement('nmc-cv-presentation')
-export class ResumePresentationElement extends LitElement {
-  @property({type: Object, attribute: false})
-  wordings!: ResumePresentationWordings;
-
-  static override styles = [
+export class ResumePresentationElement extends WithWordings<
+  Constructor<LitElement>,
+  ResumePresentationWordings
+>(LitElement) {
+  static styles = [
     resumeStyles,
     css`
       :host {

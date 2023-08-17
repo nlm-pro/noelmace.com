@@ -1,12 +1,12 @@
 import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
-import {Constructor, WithWordings} from '../with-wordings.mixin';
-import {unsafeHTML} from 'lit/directives/unsafe-html.js';
+import {WithWordings} from '../wordings/with-wordings.mixin';
 import {resumeStyles} from '../styles/common';
+import type {Constructor, litString} from '../../shared/lit-dev';
 
 export interface ResumeIntroWordings {
   callToAction?: {
-    text: string;
+    text: litString;
     url: string;
     img: {
       src: string;
@@ -14,11 +14,11 @@ export interface ResumeIntroWordings {
     };
   };
   items: {
-    title: string;
-    content: string[];
+    title: litString;
+    content: litString[];
     icon: {
       src: string;
-      caption: string;
+      caption: litString;
     };
   }[];
 }
@@ -150,7 +150,7 @@ export class ResumeIntroElement extends WithWordings<
             </div>
           </div>
           <ul class="cv__intro__item__content">
-            ${content.map((w) => html`<li>${unsafeHTML(w)}</li>`)}
+            ${content.map((w) => html`<li>${w}</li>`)}
           </ul>
         </div>`
     )}

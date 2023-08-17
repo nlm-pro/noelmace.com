@@ -1,5 +1,4 @@
 import {LitElement, css, html} from 'lit';
-import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 import {classMap} from 'lit/directives/class-map.js';
 import {customElement, property, state} from 'lit/decorators.js';
 import {ifDefined} from 'lit/directives/if-defined.js';
@@ -7,25 +6,25 @@ import {ifDefined} from 'lit/directives/if-defined.js';
 import '../shared/optimized-img';
 import {timelineStyle} from './styles/timeline';
 import {resumeStyles} from './styles/common';
-import {Constructor, WithWordings} from './with-wordings.mixin';
+import {WithWordings} from './wordings/with-wordings.mixin';
+import type {Constructor, litString} from '../shared/lit-dev';
 
 export interface ResumeExperienceItemWordings {
-  jobTitle?: string;
-  duration?: string;
+  jobTitle?: litString;
   company?: {
-    name?: string;
-    details?: string;
+    name?: litString;
+    details?: litString;
   };
-  startDate?: string;
-  endDate?: string;
-  details?: string[] | string;
+  startDate?: litString;
+  endDate?: litString;
+  details?: litString[] | litString;
   shortLine?: boolean;
   icon: string;
   webp?: string;
 }
 
 export interface ResumeExperienceWordings {
-  title: string;
+  title: litString;
   items: ResumeExperienceItemWordings[][];
   dateIntervals: {
     noEnd: string;
@@ -163,11 +162,11 @@ export class ResumeExperienceElement extends WithWordings<
                         if (Array.isArray(item.details))
                           return html` <ul class="details">
                             ${item.details.map(
-                              (el) => html`<li>${unsafeHTML(el)}</li>`
+                              (el) => html`<li>${el}</li>`
                             )}
                           </ul>`;
                         return html`<p class="details">
-                          ${unsafeHTML(item.details)}
+                          ${item.details}
                         </p>`;
                       })()}
                     </div>

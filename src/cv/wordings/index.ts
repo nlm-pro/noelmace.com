@@ -4,11 +4,12 @@ import type { ResumeIntroWordings } from '../front-page/intro';
 import type { ResumeMiscWordings } from '../last-page/misc';
 import type { ResumePresentationWordings } from '../front-page/presentation';
 import type { ResumeExperienceWordings } from '../experience';
+import type { litString } from '../../shared/lit-dev';
 
 export interface ListSectionWording {
-  title: string;
+  title: litString;
   content
-  : string[];
+  : litString[];
 }
 
 export interface ResumeWordings {
