@@ -1,7 +1,7 @@
 import {LitElement, css, html} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import type {ListSectionWording} from './wordings/wordings';
-import { resumeStyles } from './styles/common';
+import type {ListSectionWording} from '../wordings';
+import { resumeStyles } from '../styles/common';
 
 export interface ResumePresentationWordings {
   name: string;

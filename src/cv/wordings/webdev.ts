@@ -1,4 +1,4 @@
-import type { ResumeWordings } from './wordings';
+import type {ResumeWordings} from '.';
 
 const urlLivreENI =
   'https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523';

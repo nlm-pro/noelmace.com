@@ -1,7 +1,8 @@
 import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
-import {Constructor, WithWordings} from './with-wordings.mixin';
-import { resumeStyles } from './styles/common';
+import {Constructor, WithWordings} from '../with-wordings.mixin';
+import { resumeStyles } from '../styles/common';
+import { lastPageStyles } from '../styles/last-page';
 
 export interface ResumeAccomplishmentsWordings {
   title: string;
@@ -27,6 +28,7 @@ export class ResumeAccomplishmentsElement extends WithWordings<
 >(LitElement) {
   static styles = [
     resumeStyles,
+    lastPageStyles,
     css`
       h2 {
         margin-bottom: 1rem;
@@ -51,19 +53,12 @@ export class ResumeAccomplishmentsElement extends WithWordings<
       li {
         margin: 0.2em 0;
       }
-
-      @media screen and (min-width: 787px) {
-        .cv__accomplishments__content {
-          columns: 2;
-          column-gap: 2rem;
-        }
-      }
     `,
   ];
 
   override render() {
     return html`<h2>${this.wordings.title}</h2>
-      <div class="cv__accomplishments__content">
+      <div class="lg-2-columns">
         ${this.wordings.groups.map(
           (group) => html`
             <article class="accomplishment">

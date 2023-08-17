@@ -3,14 +3,15 @@ import {customElement, property} from 'lit/decorators.js';
 
 import webdevResumeWordings from './wordings/webdev';
 
-import './presentation';
-import './intro';
+import './front-page/presentation';
+import './front-page/intro';
 import './experience';
-import './accomplishments';
-import './misc';
+import './last-page/accomplishments';
+import './last-page/misc';
 import './experience';
-import './education';
-import { resumeStyles } from './styles/common';
+import './last-page/education';
+
+import {resumeStyles} from './styles/common';
 
 @customElement('nmc-cv')
 export default class ResumeElement extends LitElement {

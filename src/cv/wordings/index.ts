@@ -1,9 +1,9 @@
-import type { ResumeAccomplishmentsWordings } from '../accomplishments';
-import type { ResumeEducationWordings } from '../education';
+import type { ResumeAccomplishmentsWordings } from '../last-page/accomplishments';
+import type { ResumeEducationWordings } from '../last-page/education';
+import type { ResumeIntroWordings } from '../front-page/intro';
+import type { ResumeMiscWordings } from '../last-page/misc';
+import type { ResumePresentationWordings } from '../front-page/presentation';
 import type { ResumeExperienceWordings } from '../experience';
-import type { ResumeIntroWordings } from '../intro';
-import type { ResumeMiscWordings } from '../misc';
-import type { ResumePresentationWordings } from '../presentation';
 
 export interface ListSectionWording {
   title: string;

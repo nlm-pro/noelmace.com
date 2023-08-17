@@ -1,8 +1,8 @@
 import {LitElement, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
-import {Constructor, WithWordings} from './with-wordings.mixin';
+import {Constructor, WithWordings} from '../with-wordings.mixin';
 import {unsafeHTML} from 'lit/directives/unsafe-html.js';
-import { resumeStyles } from './styles/common';
+import {resumeStyles} from '../styles/common';
 
 export interface ResumeIntroWordings {
   callToAction?: {
