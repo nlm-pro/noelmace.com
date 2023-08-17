@@ -1,7 +1,6 @@
 import {LitElement, html, css} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-
-import webdevResumeWordings from './wordings/webdev';
+import {customElement, property, state} from 'lit/decorators.js';
+import {LOCALE_STATUS_EVENT, localized} from '@lit/localize';
 
 import './front-page/presentation';
 import './front-page/intro';
@@ -12,8 +11,11 @@ import './experience';
 import './last-page/education';
 
 import {resumeStyles} from './styles/common';
+import {ResumeWordings} from './wordings';
+import {getLocale, type Locale} from '../shared/localization';
 
 @customElement('nmc-cv')
+@localized()
 export default class ResumeElement extends LitElement {
   @property({type: Boolean})
   public quiet = false;
@@ -22,7 +24,12 @@ export default class ResumeElement extends LitElement {
   @property({type: Boolean})
   public anonymous = false;
 
-  private wordings = webdevResumeWordings;
+  // TODO: use WithWordings mixin instead
+  // (not routed directly)
+  private wordingsCode = 'webdev';
+
+  @state()
+  private wordings: ResumeWordings | null = null;
 
   static override styles = [
     resumeStyles,
@@ -154,39 +161,58 @@ export default class ResumeElement extends LitElement {
     `,
   ];
 
+  override connectedCallback(): void {
+    super.connectedCallback();
+    this.loadWordings(getLocale() as Locale);
+    window.addEventListener(LOCALE_STATUS_EVENT, (event) => {
+      if (event.detail.status === 'ready') {
+        this.loadWordings(event.detail.readyLocale as Locale);
+      }
+    });
+  }
+
   override render() {
     return html`
       <div class="first-page">
         <section id="cv__presentation">
           <nmc-cv-presentation
-            .wordings=${this.wordings.presentation}
+            .wordings=${this.wordings?.presentation}
           ></nmc-cv-presentation>
         </section>
         <section id="cv__intro">
-          <nmc-cv-intro .wordings=${this.wordings.intro}></nmc-cv-intro>
+          <nmc-cv-intro .wordings=${this.wordings?.intro}></nmc-cv-intro>
         </section>
       </div>
       <section id="cv__xp">
         <nmc-cv-experience
-          .wordings=${this.wordings.experience}
+          .wordings=${this.wordings?.experience}
           ?align=${this.align}
         ></nmc-cv-experience>
       </section>
       <div class="last-page">
         <section id="cv__accomplishments">
           <nmc-cv-accomplishments
-            .wordings=${this.wordings.accomplishments}
+            .wordings=${this.wordings?.accomplishments}
           ></nmc-cv-accomplishments>
         </section>
         <section id="cv__misc">
-          <nmc-cv-misc .wordings=${this.wordings.misc}></nmc-cv-misc>
+          <nmc-cv-misc .wordings=${this.wordings?.misc}></nmc-cv-misc>
         </section>
         <section id="cv__education">
           <nmc-cv-education
-            .wordings=${this.wordings.education}
+            .wordings=${this.wordings?.education}
           ></nmc-cv-education>
         </section>
       </div>
     `;
+  }
+
+  private async loadWordings(locale: Locale) {
+    try {
+      const module = await import(`./wordings/${this.wordingsCode}.${locale}.js`);
+      this.wordings = module.default;
+    } catch(err) {
+      console.error(err);
+    }
   }
 }
