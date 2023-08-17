@@ -204,4 +204,11 @@ export const timelineStyle = css`
       margin: 0;
     }
   }
+
+  @media print {
+    .timeline {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
 `;

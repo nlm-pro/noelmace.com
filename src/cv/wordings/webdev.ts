@@ -1,110 +1,13 @@
-export interface ExperienceItemWording {
-  jobTitle?: string;
-  duration?: string;
-  company?: {
-    name?: string;
-    details?: string;
-  };
-  startDate?: string;
-  endDate?: string;
-  details?: string[] | string;
-  shortLine?: boolean;
-  icon: string;
-  webp?: string;
-}
-
-export interface ExperienceWording {
-  title: string;
-  items: ExperienceItemWording[][];
-  dateIntervals: {
-    noEnd: string;
-    start: string;
-    end: string;
-  };
-}
-
-export interface ListSectionWording {
-  title: string;
-  content: string[];
-}
-
-export interface CVWording {
-  title: string;
-  subtitle: string;
-  note: string;
-  presentation: {
-    title: string;
-    abstract: string[];
-    langs: ListSectionWording;
-    networks?: {
-      title: string;
-      content: {
-        icon: string;
-        alt: string;
-        text: string;
-        url?: string;
-      }[];
-    };
-  };
-  intro: {
-    callToAction?: {
-      text: string;
-      url: string;
-      img: {
-        src: string;
-        alt: string;
-      };
-    };
-    items: {
-      title: string;
-      content: string[];
-      icon: {
-        src: string;
-        caption: string;
-      };
-    }[];
-  };
-  experience: ExperienceWording;
-  education: {
-    title: string;
-    items: {
-      school?: string;
-      diploma: string;
-      year?: string;
-      title?: string;
-    }[];
-  };
-  accomplishments: {
-    title: string;
-    groups: {
-      title: string;
-      items: {
-        headline: string;
-        date?: string;
-        links?: {
-          text: string;
-          href?: string;
-        }[];
-        context?: string;
-        href?: string;
-      }[];
-    }[];
-  };
-  misc: {
-    title: string;
-    content: string[];
-  };
-}
+import type { ResumeWordings } from './wordings';
 
 const urlLivreENI =
   'https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523';
 
-export const wording: CVWording = {
-  title: 'Noël Macé',
-  subtitle: 'Développeur/Architecte Web',
-  note: "14 ans d'expérience",
+export default {
   presentation: {
-    title: 'Présentation',
+    name: 'Noël Macé',
+    jobTitle: 'Développeur/Architecte Web',
+    note: "14 ans d'expérience",
     abstract: [
       `D'un naturel passionné et investi, je recherche perpétuellement de nouveaux défis techniques, intellectuels et humains.`,
       `Grâce à cela, j'ai au cours des années accumulé une expérience complète et variée dans de nombreux domaines, notamment: le développement et l'architecture applicative, l'administration système et réseaux, la pédagogie, le management et la communication.`,
@@ -487,4 +390,4 @@ export const wording: CVWording = {
       'Legos, maquettes, puzzles',
     ],
   },
-};
+} satisfies ResumeWordings;
