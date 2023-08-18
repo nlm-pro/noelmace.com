@@ -1,7 +1,7 @@
 import {LitElement, TemplateResult, css, html} from 'lit';
 import {customElement, state} from 'lit/decorators.js';
 import {until} from 'lit/directives/until.js';
-import {clickEventHandler} from './clickevent-handler.js';
+import {clickEventHandler} from './clickevent-handler';
 
 export interface Route {
   path: RegExp;
@@ -28,8 +28,8 @@ export interface NavigationOptions {
   event?: Event | null;
 }
 
-@customElement('router-outlet')
-export class RouterOutletElement extends LitElement {
+@customElement('nmc-main-views')
+export class AppMainViewsElement extends LitElement {
   static override styles = [
     css`
       @media screen {
@@ -44,14 +44,14 @@ export class RouterOutletElement extends LitElement {
     {
       path: /^\/cv/,
       template: html`<nmc-cv></nmc-cv>`,
-      loader: () => import('../cv/cv.js'),
+      loader: () => import('../../cv/cv.js'),
     },
     {
       // defining a default route is mandatory as their isn't any navigation
       // fallback in case the current path doesn't match any route
       path: /.*/,
       template: html`<nmc-home></nmc-home>`,
-      loader: () => import('../home/home.js'),
+      loader: () => import('../../home/home.js'),
     },
   ];
 
