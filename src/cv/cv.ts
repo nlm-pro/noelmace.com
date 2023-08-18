@@ -37,14 +37,13 @@ export default class ResumeElement extends LitElement {
       :host {
         display: block;
         margin: 0 auto;
-        --primary-text-color: #444;
-        --primary-text-color-stronger: #333;
-        --primary-text-color-softer: #555;
-        --primary-bg-color: white;
-        --primary-color: #002d61;
-        --primary-color-stronger: #00152e;
-        --primary-color-softer: #004594;
-        --link-color: #004594;
+        --primary-text-color: var(--font-color);
+        --primary-text-color-stronger: var(--font-color-stronger);
+        --primary-text-color-softer: var(--font-color-softer);
+        --primary-bg-color: var(--color-lvl0);
+        --primary-color: var(--cv-primary-color, #002d61);
+        --primary-color-stronger: var(--cv-primary-stronger, #00152e);
+        --primary-color-softer: var(--cv-primary-softer, #004594);
         --mdc-theme-primary: var(--primary-color);
         --neutral-color-900: #212121;
         --neutral-color-800: #424242;
@@ -56,7 +55,7 @@ export default class ResumeElement extends LitElement {
         --neutral-color-200: #eee;
         --neutral-color-100: #f5f5f5;
         --neutral-color-50: #fafafa;
-        --neutral-color-0: #fff;
+        --neutral-color-0: var(--color-lvl0, #fff);
         --soft-bg-color: var(--neutral-color-100);
         --stronger-bg-color: var(--neutral-color-300);
         --daucus-menu-active-color: var(--primary-color);

@@ -12,12 +12,18 @@
   --primary-color-dark: var(--color-lvl1);
   --link-color: #669bcf;
   --font-color: #fff;
+  --font-color-stronger: #d3d3d3;
+  --font-color-softer: #999;
   --font-on-primary: #fff;
   --link-card-bg-color: var(--primary-color);
   --link-card-bg-color-hover: var(--primary-color-light);
   --button-hover-bg-color: var(--primary-color-light);
   --light-on-primary: var(--color-lvl4);
   --spinner-animation-color: rgba(255, 255, 255, 0.2);
+
+  --cv-primary-color: #b2c0cf;
+  --cv-primary-color-stronger: #99abbf;
+  --cv-primary-color-softer: #ccd5df;
 }
 
 section {
