@@ -12,12 +12,12 @@ export default {
     jobTitle: `Senior Web Developer`,
     note: `Experience: ${xpYears} years`,
     abstract: [
-      `D'un naturel passionné et investi, je recherche perpétuellement de nouveaux défis techniques, intellectuels et humains.`,
-      `Grâce à cela, j'ai au cours des années accumulé une expérience complète et variée dans de nombreux domaines (développement et architecture applicative, administration système et réseaux, pédagogie, management, communication, etc.).`,
-      `Depuis 2014, mon focus technique se porte essentiellement sur la plateforme Web, ses outils et ses standards.`,
+      `My passionate and inquiring nature lead me to a constant quest for new technical, intellectual and human challenges.`,
+      `This brought me to a wide variety of roles, from which I gained diversed knowledge and experience (software developement and architecture, sysadmin and netadmin, teaching and pedagogy, management, communication, etc.).`,
+      html`Web development &mdash; and more specifically the web platform, dev tools et standards &mdash; is my main focus since 2014, and a long-time passion.`,
     ],
     langs: {
-      title: 'Langues',
+      title: 'Languages',
       content: [
         'English: advanced (C1/C2)',
         'French: native & advanced',
@@ -32,172 +32,162 @@ export default {
     },
     items: [
       {
-        title: 'Architecture & Développement Web',
+        title: 'Web Architecture & Development',
         icon: {
           template: frWordings.intro.items[0].icon.template,
           caption: 'expertise',
         },
         content: [
-          html`Focus sur les
-            <strong>standards et principes transverses</strong> (Web Components,
-            Web APIs, PWAs, PRPL, a11y, performances, etc.)`,
-          html`Maitrise de nombreux frameworks et bibliothèques (<strong
+          html`Holistic and objective mastery of <strong>Web development
+            principles and fundamentals</strong> (Web Components,
+            Web APIs, PWAs, PRPL, a11y, performance, etc.)`,
+          html`Fluent in a wide variety of frameworks and libraries (<strong
               >Lit, Open WC, Angular, React, Vue, Redux, Gatsby, 11ty,
               etc.</strong
             >)`,
-          html`Maitrise avancée de
-            <strong>Angular, Angular CLI & Nrwl/Nx</strong> (contributeur de
-            2016 à 2018, puis suivi&nbsp;régulier)`,
-          html`<strong>Livre</strong> complet sur les principes fondamentaux de
+          html`Advanced expertise in
+            <strong>Angular, Angular CLI & Nrwl/Nx</strong> (OSS contributor from
+            2016 to 2018, then regular monitoring)`,
+          html`Wrote a thorough <strong>book</strong> about modern web development fundamentals (published in french by 
             <em
               ><a
                 href="https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523"
                 target="_blank"
                 rel="noreferrer noopener"
-                >Développement & Architecture des Applications Web Modernes</a
+                >ENI editions</a
               ></em
             >
-            publié aux éditions ENI en 2021`,
-          html`Aptitudes fullstack et DevOps (REST, ORM, CI/CD, SGBD, Docker,
+            in 2021)`,
+          html`Fullstack and DevOps proficiencies (REST, ORM, CI/CD, SGBD, Docker,
           PaaS, Node.js, Python, Java, etc.)`,
         ],
       },
       {
-        title: 'Pédagogie',
+        title: 'Pedagogy',
         icon: {
           template: frWordings.intro.items[1].icon.template,
           caption: 'guiding thread',
         },
         content: [
-          html`<strong>Mentoring</strong> et
-            <strong>transmission de compétences</strong> sont les piliers et
-            fils conducteurs de l'ensemble de ma&nbsp;carrière`,
-          html`Large expérience, en tant que formateur autonome et dans la
-          direction et l'accompagnement d'importantes équipes pédagogique et R&D`,
+          html`<strong>Mentoring</strong> and
+            <strong>teaching</strong> are the backbone of my whole career`,
+          html`Estensive and wide experience as an independant instructor, teacher, educational designer and teaching manager, having led large teams in both instructionnal and R&D environments`,
         ],
       },
       {
-        title: 'Partage & Découverte',
+        title: 'Sharing & Research',
         icon: {
           template: frWordings.intro.items[2].icon.template,
           caption: 'motivations',
         },
         content: [
-          html`Forte appétence pour l'<strong>Open Source</strong> et les
-            oeuvres&nbsp;libres`,
-          html`Nombreux <strong>workshops et conférences</strong> créés
-            et&nbsp;présentés`,
-          html`Matrise de nombreux outils et stratégies de
-            <strong>documentation, typage et testing</strong>`,
+          html`Strong and long-standing interest for <strong>Open Source</strong> and the free culture mouvement in general`,
+          html`Created and gave numerous <strong>workshops et lectures</strong>`,
+          html`Love <strong>documentation, typing et testing</strong> and master the related tools and good practices`,
         ],
       },
     ],
   },
   experience: {
-    title: 'Expérience',
+    title: 'Experience',
     dateIntervals: {
-      noEnd: 'Depuis',
-      start: 'De',
-      end: 'à',
+      noEnd: 'Since',
+      start: 'From',
+      end: 'to',
     },
     items: [
       [
         {
           company: {name: 'Freelance'},
-          startDate: 'janv. 2020',
-          jobTitle: 'Consultant, Formateur',
-          icon: '/images/companies-logos/fwd.svg',
-          details: 'Développement & architecture Web',
+          startDate: 'jan. 2020',
+          jobTitle: 'Consultant & Trainer',
+          icon: frWordings.experience.items[0][0].icon,
+          details: 'Web Development & Architecture',
         },
         {
           company: {name: 'blindnet', details: 'start-up'},
-          startDate: 'févr. 2022',
+          startDate: 'feb. 2022',
           endDate: 'oct. 2022',
           jobTitle: 'VP, Technology & Pedagogy',
           details: [
-            'Encadrement du développement Web, Java et Scala',
-            'Accompagnement client et maintenance des documentations techniques',
-            'Promotion de la privacy',
+            'Leading Web, Java and Scala development',
+            'Customer Support & Technical Documentation maintenance',
+            'Privacy Advocacy',
           ],
           icon: frWordings.experience.items[0][1].icon,
         },
         {
           company: {
             name: 'Editions ENI',
-            details: "maison d'édition",
+            details: "book publisher",
           },
-          jobTitle: 'Auteur',
-          startDate: 'mars 2020',
-          endDate: 'mars 2021',
-          icon: '/images/companies-logos/eni.svg',
+          jobTitle: 'Author',
+          startDate: 'march 2020',
+          endDate: 'march 2021',
+          icon: frWordings.experience.items[0][2].icon,
           details: [
-            html`Rédaction du livre
-              <a href=${urlLivreENI} target="_blank" rel="noferrer noopener"
-                ><strong
-                  >Développement et architecture des applications Web
-                  Modernes</strong
-                ></a
-              >
+            html`Wrote of a <a href=${urlLivreENI} target="_blank" rel="noferrer noopener"
+                ><strong>thorough book</strong></a> briging a new perspective on Modern Web Development fundamentals
               (608 pages)`,
-            "16500 lignes de code d'exemple, testées et exécutables",
-            'Développement de bibliothèques, outils, scripts et projets permettant de valider et appuyer la rédaction',
+            "Developed a wide variety of examples, tests and automation tools (16500 lines of code)",
+            'Created Open Source libraries, tools, scripts and projects as proof of concepts and illustrations',
           ],
         },
         {
           company: {
             name: 'Bonitasoft',
-            details: 'éditeur logiciel Open Source (BPM)',
+            details: 'Open Source Software Editor (BPM)',
           },
-          jobTitle: 'Developer Advocate Web',
-          startDate: 'avr. 2019',
+          jobTitle: 'Developer Advocate, Web',
+          startDate: 'apr. 2019',
           endDate: 'oct. 2019',
           icon: frWordings.experience.items[0][3].icon,
           webp: frWordings.experience.items[0][3].webp,
           details: [
-            html`<strong>Modernisation, DevX et performance</strong> :
-              contribution et accompagnement à une transition de
-              <em>AngularJS</em> aux <em>Web Components</em>`,
-            "Mise en place d'une stratégie et d'outils facilitant la production de contenus, ainsi que la gestion de 213 évènements (via Gatsby, Netlify CMS, GitHub)",
+            html`<strong>DevX, performance and modernisation</strong> :
+              lead and contribute to the migration from
+              <em>AngularJS</em> to <em>Web Components</em>`,
+            "Set up strategies and tools to facilite content creation and technical events management (via Gatsby, Netlify CMS & GitHub)",
           ],
         },
         {
           company: {name: 'SFEIR', details: 'ESN, 500 employés'},
-          jobTitle: 'Developer Advocate / Architecte Web',
-          startDate: 'juin 2018',
-          endDate: 'avr. 2019',
-          icon: '/images/companies-logos/sfeir.jpg',
-          webp: '/images/companies-logos/sfeir.webp',
+          jobTitle: 'Developer Advocate / Web Architect',
+          startDate: 'june 2018',
+          endDate: 'apr. 2019',
+          icon: frWordings.experience.items[0][4].icon,
+          webp: frWordings.experience.items[0][4].webp,
           details: [
-            html`<strong>Double mission</strong> : expertise technique (3j/5) et advocacy`,
-            html`Stabilisation et amélioration de la maintenabilité d'une application <strong>Angular, NgRx et Preact</strong> en tant que tech lead pour la Société Générale`,
-            html`Encadrement et montée en compétence d'une équipe de <strong>30 développeurs Angular</strong> (Paris & Hong Kong) pour BNP Paribas`,
-            "Audit et amélioration des performances de Progressive Web Apps (Vanilla, React, Vue, Angular), migrations AngularJS-Angular, réponses à appels d'offre, etc.",
+            html`<strong>Twofold mission</strong> : technical expertise (3d/w) and developer advocacy`,
+            html`Improved the stability and maintainability of an <strong>Angular, NgRx et Preact</strong> application as a technical leader for "la Société Générale"`,
+            html`Supervisation and training of a team of <strong>30 Angular developers</strong> (in both Paris & Hong Kong) for the BNP Paribas company`,
+            html`Audit and performance improvement of several Progressive Web Apps (<em>in VanillaJS, React, Vue, Angular</em>), migrations from AngularJS to Angular, defined the architecture for several new Web Apps, etc.`,
           ],
         },
       ],
       [
         {
           company: {name: 'Sedona', details: 'ESN, 100 employés'},
-          jobTitle: 'Directeur Technique JS / Architecte Web',
-          startDate: 'déc. 2015',
-          endDate: 'mai 2018',
-          icon: '/images/companies-logos/sedona.png',
-          webp: '/images/companies-logos/sedona.webp',
+          jobTitle: 'Technical Director, Javascript / Web App Architect',
+          startDate: 'dec. 2015',
+          endDate: 'may 2018',
+          icon: frWordings.experience.items[1][0].icon,
+          webp: frWordings.experience.items[1][0].webp,
           details: [
-            html`<strong>Direction technique de 8 projets</strong> front-end JavaScript (AngularJS, JQuery, PHP et Node.js) menés par 3 équipe de 12 développeurs`,
-            html`Définition de l'architecture front-end web de référence pour Sedona ainsi que le groupe <em>Harmonie Mutuelle</em>`,
-            html`<strong>Réponse à appels d'offre</strong> et <strong>modernisation</strong> de l'usage des technologies Web sur l'ensemble du groupe (marques Sedona, West, RedShift et Inadeo)`,
-            html`<em>(À partir de déc. 2016)</em> suivi, développement et mise en place des codes et outils transverses sur 3 projets, menés par 6 équipes (30 développeurs), en tant qu'<strong>architecte référant Angular</strong> pour le compte de <em>Saint Gobain</em>`,
+            html`<strong>Architecture & Technical Direction for 8 front-end JavaScript projets</strong> (<em>AngularJS, JQuery, PHP et Node.js</em>), leading 3 teams of 12 developers`,
+            html`Defining the reference web front-end web architecture for Sedona and the <em>Harmonie Mutuelle</em> group`,
+            html`<strong>Modernisation</strong> of Web technologies usages for the whole groupe (Sedona, West, RedShift et Inadeo brands)`,
+            html`<em>(From dec. 2016)</em> defining and maintaining transversal guidelines and tooling for 3 projets, leadings 6 teams (30 developers), as the <strong>lead Angular architect</strong> for <em>Saint Gobain</em>`,
           ],
         },
         {
           company: {name: 'Française des Jeux'},
           jobTitle: 'Lead Developer AngularJS',
-          startDate: 'juin 2015',
+          startDate: 'june 2015',
           endDate: 'nov. 2015',
           icon: frWordings.experience.items[1][1].icon,
           webp: frWordings.experience.items[1][1].webp,
-          details: html`Développement des "widgets" de gestion de compte et de l'Euromillions en <strong>AngularJS 1.4 et ES2015</strong> pour le portail fdj.fr, au sein d'une équipe de 8 développeurs.`,
+          details: html`Development of the account management and Euromillions "widgets" with <strong>AngularJS 1.4 and ES2015</strong> for the fdj.fr portal, leading a team of 8 developers`,
           shortLine: true,
         },
         {
@@ -208,40 +198,40 @@ export default {
           icon: frWordings.experience.items[1][2].icon,
           webp: frWordings.experience.items[1][2].webp,
           details: [
-            html`<strong>38 formations</strong> délivrées en ligne et présentiel`,
-            html`<strong>3 applications</strong> Java (Spring, Struts, Hibernate) & Android développées`,
+            html`<strong>38 courses</strong> delivered both on-line and face-to-face`,
+            html`<strong>3 applications</strong> Java (Spring, Struts, Hibernate) & Android developed`,
           ],
           shortLine: true,
         },
         {
           company: {name: 'Supinfo', details: 'International University'},
-          jobTitle: "Directeur de l'enseignement Unix",
-          startDate: 'juin 2010',
-          endDate: 'avr. 2011',
+          jobTitle: "Director of Unix Teaching",
+          startDate: 'june 2010',
+          endDate: 'apr. 2011',
           icon: frWordings.experience.items[1][3].icon,
           webp: frWordings.experience.items[1][3].webp,
           details: [
-            html`<strong>70 formateurs recrutés</strong> et formés pour l'enseignement de <strong>3 matières (Linux, Apple & Sécurité)</strong> sur les 30 sites du groupe à l'international`,
-            html`<strong>7 unités pédagogiques</strong> définies, rédigées et encadrées`,
+            html`hiring and training <strong>70 teachers hired</strong> for <strong>Linux, Apple & Sécurité</strong> education on the 30 sites of the group`,
+            html`defining, writing and managing <strong>7 educational units</strong>`,
           ],
           shortLine: true,
         },
         {
           company: {name: 'Supinfo'},
-          jobTitle: 'Enseignant formateur',
+          jobTitle: 'Teacher / Trainer',
           startDate: 'oct. 2009',
           endDate: 'juin 2010',
           icon: frWordings.experience.items[1][4].icon,
           webp: frWordings.experience.items[1][4].webp,
           details:
-            html`12 unités pégagogiques enseignées sur 18 sites dans<br />3 pays (+ DOM)`,
+            'treaching 12 educational units on 18 sites, in 3 different countries',
           shortLine: true,
         },
       ],
     ],
   },
   education: {
-    title: 'Formation',
+    title: 'Education',
     items: [
       {
         school: 'Supinfo International University',
@@ -249,20 +239,20 @@ export default {
         year: '2010',
       },
       {
-        school: 'Université Toulouse Jean Jaurès',
-        diploma: 'DEUG Mathématiques Appliquées aux Sciences Sociales',
+        school: 'Toulouse Jean Jaurès University',
+        diploma: 'Associate Degree in Applied Mathematics for Social Science',
         year: '2007',
       },
     ],
   },
   accomplishments: {
-    title: 'Réalisations',
+    title: 'Creations',
     groups: [
       {
-        title: '28 Conférences & Workshops',
+        title: '28 Lectures & Workshops',
         items: [
           {
-            headline: "Architecture d'applications Web",
+            headline: "Web Applications Architecture",
           },
           {
             headline: 'Web Performance',
@@ -271,13 +261,13 @@ export default {
             headline: 'Soft Skills',
           },
           {
-            headline: "Stratégies d'entreprise",
+            headline: "Corporate Strategy",
           },
           {
-            headline: 'Frameworks et bibliothèques de développement Web',
+            headline: 'Web Development Frameworks & Libraries',
           },
           {
-            headline: 'Histoire des technologies',
+            headline: 'IT History',
           },
         ],
       },
@@ -291,7 +281,7 @@ export default {
             headline: 'Lead Development',
           },
           {
-            headline: 'Bien-être au travail',
+            headline: 'Workplace Wellness',
           },
         ],
       },
@@ -299,19 +289,19 @@ export default {
         title: '20+ Publications',
         items: [
           {
-            headline: 'Livre de référence',
+            headline: 'Reference Book',
           },
           {
             headline: 'Blogs',
           },
           {
-            headline: `Livres blancs`,
+            headline: `White Papers`,
           },
           {
-            headline: `Manuels de formation`,
+            headline: `Training Manuals`,
           },
           {
-            headline: `Documentations techniques`,
+            headline: `Technical & Organizational Documentations`,
           },
           {
             headline: `Copywriting`,
@@ -319,7 +309,7 @@ export default {
         ],
       },
       {
-        title: html`<span style="font-size: 32px; position: relative; top: +6px">∞</span> projets Open Source`,
+        title: html`<span style="font-size: 32px; position: relative; top: +6px">∞</span> Open Source projects`,
         items: [
           {
             headline: 'CLIs',
@@ -328,24 +318,24 @@ export default {
             headline: 'Static Site Generators',
           },
           {
-            headline: 'Framework et bibliothèques de développment web',
+            headline: 'Framework and Libraries for Web Development',
           },
           {
-            headline: 'Expérimentations, Démonstrations techniques, Proofs of Concepts ...',
+            headline: 'Experiments, Technical Demonstrations, Proofs of Concepts...',
           },
         ],
       },
     ],
   },
   misc: {
-    title: "Centres d'intérêt",
+    title: "Hobbies & Interests",
     content: [
-      'Logiciel Libre, Open Source & Ethical Source',
-      'Pédagogie et vulgarisation scientifique',
-      'Jeux de rôle et de société',
-      'Mathématiques et Physique théorique',
-      html`Sciences naturelles, sociales et&nbsp;cognitives`,
-      'Legos, maquettes, puzzles',
+      'Free Culture, Open Source & Ethical Source',
+      'Pedagogy and Science Popularization',
+      'Tabletop Roleplay & Board Games',
+      'Mathematics & Theorical Physics',
+      `Natural, Social & Cognitive Sciences`,
+      'Legos, Model Creation & Puzzles',
     ],
   },
 } satisfies ResumeWordings;
