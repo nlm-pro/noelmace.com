@@ -2,11 +2,11 @@ import {LitElement, TemplateResult, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {WithWordings} from '../wordings/with-wordings.mixin';
 import {resumeStyles} from '../styles/common';
-import type {Constructor, litString} from '../../shared/lit-dev';
+import type {Constructor, LitString} from '../../shared/lit-dev';
 
 export interface ResumeIntroWordings {
   callToAction?: {
-    text: litString;
+    text: LitString;
     url: string;
     img: {
       src: string;
@@ -14,11 +14,11 @@ export interface ResumeIntroWordings {
     };
   };
   items: {
-    title: litString;
-    content: litString[];
+    title: LitString;
+    content: LitString[];
     icon: {
       template: TemplateResult;
-      caption: litString;
+      caption: LitString;
     };
   }[];
 }

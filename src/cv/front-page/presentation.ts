@@ -3,20 +3,20 @@ import {customElement} from 'lit/decorators.js';
 import type {ListSectionWording} from '../wordings';
 import {resumeStyles} from '../styles/common';
 import {WithWordings} from '../wordings/with-wordings.mixin';
-import type {Constructor, litString} from '../../shared/lit-dev';
+import type {Constructor, LitString} from '../../shared/lit-dev';
 
 export interface ResumePresentationWordings {
-  name: litString;
-  jobTitle: litString;
-  note: litString;
-  abstract: litString[];
+  name: LitString;
+  jobTitle: LitString;
+  note: LitString;
+  abstract: LitString[];
   langs: ListSectionWording;
   networks?: {
-    title: litString;
+    title: LitString;
     content: {
       icon: TemplateResult;
       alt: string;
-      text: litString;
+      text: LitString;
       url?: string;
     }[];
   };

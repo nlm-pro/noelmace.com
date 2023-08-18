@@ -7,24 +7,24 @@ import '../shared/optimized-img';
 import {timelineStyle} from './styles/timeline';
 import {resumeStyles} from './styles/common';
 import {WithWordings} from './wordings/with-wordings.mixin';
-import type {Constructor, litString} from '../shared/lit-dev';
+import type {Constructor, LitString} from '../shared/lit-dev';
 
 export interface ResumeExperienceItemWordings {
-  jobTitle?: litString;
+  jobTitle?: LitString;
   company?: {
-    name?: litString;
-    details?: litString;
+    name?: LitString;
+    details?: LitString;
   };
-  startDate?: litString;
-  endDate?: litString;
-  details?: litString[] | litString;
+  startDate?: LitString;
+  endDate?: LitString;
+  details?: LitString[] | LitString;
   shortLine?: boolean;
   icon: string;
   webp?: string;
 }
 
 export interface ResumeExperienceWordings {
-  title: litString;
+  title: LitString;
   items: ResumeExperienceItemWordings[][];
   dateIntervals: {
     noEnd: string;

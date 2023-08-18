@@ -3,20 +3,20 @@ import {customElement} from 'lit/decorators.js';
 import {WithWordings} from '../wordings/with-wordings.mixin';
 import {resumeStyles} from '../styles/common';
 import {lastPageStyles} from '../styles/last-page';
-import type {Constructor, litString} from '../../shared/lit-dev';
+import type {Constructor, LitString} from '../../shared/lit-dev';
 
 export interface ResumeAccomplishmentsWordings {
-  title: litString;
+  title: LitString;
   groups: {
-    title: litString;
+    title: LitString;
     items: {
-      headline: litString;
-      date?: litString;
+      headline: LitString;
+      date?: LitString;
       links?: {
-        text: litString;
+        text: LitString;
         href?: string;
       }[];
-      context?: litString;
+      context?: LitString;
       href?: string;
     }[];
   }[];
