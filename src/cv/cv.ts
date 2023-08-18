@@ -29,7 +29,7 @@ export default class ResumeElement extends LitElement {
   private wordingsCode = 'webdev';
 
   @state()
-  private wordings: ResumeWordings | null = null;
+  private wordings!: ResumeWordings;
 
   static override styles = [
     resumeStyles,
@@ -204,6 +204,10 @@ export default class ResumeElement extends LitElement {
         </section>
       </div>
     `;
+  }
+
+  override shouldUpdate() {
+    return !!this.wordings;
   }
 
   private async loadWordings(locale: Locale) {
