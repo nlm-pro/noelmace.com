@@ -1,4 +1,4 @@
-import {LitElement, css, html} from 'lit';
+import {LitElement, TemplateResult, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {WithWordings} from '../wordings/with-wordings.mixin';
 import {resumeStyles} from '../styles/common';
@@ -17,7 +17,7 @@ export interface ResumeIntroWordings {
     title: litString;
     content: litString[];
     icon: {
-      src: string;
+      template: TemplateResult;
       caption: litString;
     };
   }[];
@@ -84,9 +84,13 @@ export class ResumeIntroElement extends WithWordings<
         margin: 1rem 1rem 0;
       }
 
-      .icon {
+      .icon-container > img, .icon-container > svg {
         width: 50px;
         margin-bottom: 0.5rem;
+      }
+
+      .icon-container > svg {
+        fill: var(--font-color);
       }
 
       .print-link {
@@ -143,7 +147,7 @@ export class ResumeIntroElement extends WithWordings<
         html` <div class="cv__intro__item">
           <div class="cv__intro__item__header">
             <div class="icon-container">
-              <img class="icon light-icon" src=${icon.src} alt="" />
+              ${icon.template}
             </div>
             <div class="title-container">
               <div class="category">${icon.caption}</div>

@@ -1,4 +1,4 @@
-import {LitElement, css, html} from 'lit';
+import {LitElement, TemplateResult, css, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import type {ListSectionWording} from '../wordings';
 import {resumeStyles} from '../styles/common';
@@ -14,7 +14,7 @@ export interface ResumePresentationWordings {
   networks?: {
     title: litString;
     content: {
-      icon: string;
+      icon: TemplateResult;
       alt: string;
       text: litString;
       url?: string;
@@ -90,10 +90,11 @@ export class ResumePresentationElement extends WithWordings<
         align-items: center;
       }
 
-      .networks__item img {
+      .networks__item svg {
         width: 25px;
         height: 25px;
         margin: 0.3rem;
+        fill: var(--neutral-color-0);
       }
 
       .networks__item__content {
@@ -143,11 +144,7 @@ export class ResumePresentationElement extends WithWordings<
                         rel="noreferrer noopener"
                         class="invisible-link"
                       >
-                        <img
-                          src=${item.icon}
-                          alt=${item.alt}
-                          class="light-icon"
-                        />
+                        ${item.icon}
                         <span class="networks__item__content">
                           ${item.text}
                         </span>

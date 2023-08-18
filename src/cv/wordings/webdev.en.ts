@@ -1,14 +1,16 @@
 import {html} from 'lit';
 import type {ResumeWordings} from '.';
+import frWordings, {xpYears} from './webdev.fr';
 
 const urlLivreENI =
   'https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523';
 
 export default {
+  ...frWordings,
   presentation: {
-    name: 'Noël Macé',
+    ...frWordings.presentation,
     jobTitle: `Senior Web Developer`,
-    note: "experience: 14 years",
+    note: `Experience: ${xpYears} years`,
     abstract: [
       `D'un naturel passionné et investi, je recherche perpétuellement de nouveaux défis techniques, intellectuels et humains.`,
       `Grâce à cela, j'ai au cours des années accumulé une expérience complète et variée dans de nombreux domaines (développement et architecture applicative, administration système et réseaux, pédagogie, management, communication, etc.).`,
@@ -17,68 +19,22 @@ export default {
     langs: {
       title: 'Langues',
       content: [
-        'Anglais : avancé (C1/C2)',
-        'Français : natif & littéraire',
-        'Espagnol: notions (A2)',
-      ],
-    },
-    networks: {
-      title: 'Réseaux',
-      // title: 'Contacts',
-      content: [
-        // {
-        //   icon: "/images/icons/mail.svg",
-        //   alt: "Email",
-        //   text: "",
-        //   url: "mailto:",
-        // },
-        // {
-        //   icon: "/images/icons/phone.svg",
-        //   alt: "Tel",
-        //   text: "",
-        //   url: "tel:",
-        // },
-        {
-          icon: '/images/icons/linkedin.svg',
-          alt: 'LinkedIn',
-          text: '/in/noelmdev',
-          url: 'https://www.linkedin.com/in/noelmdev/',
-        },
-        // {
-        //   icon: '/images/icons/github.svg',
-        //   alt: 'GitHub',
-        //   text: '@nlm-pro',
-        //   url: 'https://github.com/nlm-pro',
-        // },
-        // {
-        //   icon: '/images/icons/github.svg',
-        //   alt: 'GitHub',
-        //   text: '@xxx',
-        //   url: 'https://github.com/xxx',
-        // },
-        {
-          icon: '/images/icons/webpage.svg',
-          alt: 'page web personnelle',
-          text: 'noelmace.com',
-          url: 'https://noelmace.com',
-        },
+        'English: advanced (C1/C2)',
+        'French: native & advanced',
+        'Spanish: basics (A2)',
       ],
     },
   },
   intro: {
     callToAction: {
-      text: `Programmez un entretien sur`,
-      url: 'calendly.com/noelmace',
-      img: {
-        src: '/images/icons/calendly.svg',
-        alt: 'Calendly',
-      },
+      ...frWordings.intro.callToAction,
+      text: `Schedule an interview on`,
     },
     items: [
       {
         title: 'Architecture & Développement Web',
         icon: {
-          src: '/images/icons/tools.svg',
+          template: frWordings.intro.items[0].icon.template,
           caption: 'expertise',
         },
         content: [
@@ -109,8 +65,8 @@ export default {
       {
         title: 'Pédagogie',
         icon: {
-          src: '/images/icons/rails.svg',
-          caption: 'ligne directrice',
+          template: frWordings.intro.items[1].icon.template,
+          caption: 'guiding thread',
         },
         content: [
           html`<strong>Mentoring</strong> et
@@ -123,7 +79,7 @@ export default {
       {
         title: 'Partage & Découverte',
         icon: {
-          src: '/images/icons/motivation.svg',
+          template: frWordings.intro.items[2].icon.template,
           caption: 'motivations',
         },
         content: [
@@ -163,7 +119,7 @@ export default {
             'Accompagnement client et maintenance des documentations techniques',
             'Promotion de la privacy',
           ],
-          icon: '/images/companies-logos/blindnet.svg',
+          icon: frWordings.experience.items[0][1].icon,
         },
         {
           company: {
@@ -195,8 +151,8 @@ export default {
           jobTitle: 'Developer Advocate Web',
           startDate: 'avr. 2019',
           endDate: 'oct. 2019',
-          icon: '/images/companies-logos/bonitasoft.png',
-          webp: '/images/companies-logos/bonitasoft.webp',
+          icon: frWordings.experience.items[0][3].icon,
+          webp: frWordings.experience.items[0][3].webp,
           details: [
             html`<strong>Modernisation, DevX et performance</strong> :
               contribution et accompagnement à une transition de
@@ -239,8 +195,8 @@ export default {
           jobTitle: 'Lead Developer AngularJS',
           startDate: 'juin 2015',
           endDate: 'nov. 2015',
-          icon: '/images/companies-logos/fdj.png',
-          webp: '/images/companies-logos/fdj.webp',
+          icon: frWordings.experience.items[1][1].icon,
+          webp: frWordings.experience.items[1][1].webp,
           details: html`Développement des "widgets" de gestion de compte et de l'Euromillions en <strong>AngularJS 1.4 et ES2015</strong> pour le portail fdj.fr, au sein d'une équipe de 8 développeurs.`,
           shortLine: true,
         },
@@ -249,8 +205,8 @@ export default {
           jobTitle: 'Formateur, Consultant',
           startDate: 'mai 2011',
           endDate: 'nov. 2015',
-          icon: '/images/companies-logos/nmc.png',
-          webp: '/images/companies-logos/nmc.webp',
+          icon: frWordings.experience.items[1][2].icon,
+          webp: frWordings.experience.items[1][2].webp,
           details: [
             html`<strong>38 formations</strong> délivrées en ligne et présentiel`,
             html`<strong>3 applications</strong> Java (Spring, Struts, Hibernate) & Android développées`,
@@ -262,8 +218,8 @@ export default {
           jobTitle: "Directeur de l'enseignement Unix",
           startDate: 'juin 2010',
           endDate: 'avr. 2011',
-          icon: '/images/companies-logos/supinfo.jpg',
-          webp: '/images/companies-logos/supinfo.webp',
+          icon: frWordings.experience.items[1][3].icon,
+          webp: frWordings.experience.items[1][3].webp,
           details: [
             html`<strong>70 formateurs recrutés</strong> et formés pour l'enseignement de <strong>3 matières (Linux, Apple & Sécurité)</strong> sur les 30 sites du groupe à l'international`,
             html`<strong>7 unités pédagogiques</strong> définies, rédigées et encadrées`,
@@ -275,8 +231,8 @@ export default {
           jobTitle: 'Enseignant formateur',
           startDate: 'oct. 2009',
           endDate: 'juin 2010',
-          icon: '/images/companies-logos/supinfo.jpg',
-          webp: '/images/companies-logos/supinfo.webp',
+          icon: frWordings.experience.items[1][4].icon,
+          webp: frWordings.experience.items[1][4].webp,
           details:
             html`12 unités pégagogiques enseignées sur 18 sites dans<br />3 pays (+ DOM)`,
           shortLine: true,
