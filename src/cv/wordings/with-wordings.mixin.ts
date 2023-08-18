@@ -12,6 +12,10 @@ export const WithWordings = <T extends Constructor<LitElement>, W>(superClass: T
   class WithWordingElement extends superClass {
     @property({ type: Object, attribute: false })
     wordings!: W;
+
+    override shouldUpdate() {
+      return !!this.wordings;
+    }
   }
   return WithWordingElement as Constructor<WithWordingsInterface<W>> & T;
 };

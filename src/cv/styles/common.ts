@@ -1,6 +1,10 @@
 import {css} from 'lit';
 
 export const resumeStyles = css`
+  a {
+    color: var(--link-color);
+  }
+  
   @media print {
     * {
       box-sizing: border-box;
