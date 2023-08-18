@@ -5,11 +5,8 @@ export type PathUpdatedFunction = (path: string, event?: Event | null) => void;
  *
  * Inspired by the router helper from {@link https://github.com/Polymer/pwa-helpers/blob/v0.9.1/src/router.ts|polymer pwa-helper v0.9.1 - router.ts}
  *
- * @param baseUrl Prefix to ignore in location pathname when generating a path from an anchor href
- *
  */
 export const clickEventHandler =
-  (baseUrl: string) =>
   (pathUpdatedCallback: PathUpdatedFunction) =>
   (e: MouseEvent) => {
     if (
@@ -66,7 +63,7 @@ export const clickEventHandler =
       let href = hrefAttr;
       if (hrefAttr.startsWith("./")) {
         const previousPath = window.location.pathname
-          .replace(new RegExp(`^${baseUrl}(.*)`), "$1")
+          .replace(new RegExp(`^/(.*)`), "$1")
           .replace(/(.*)\/$/, "$1");
         [href] = hrefAttr.split("#");
         path = previousPath + href.slice(1);
