@@ -12,8 +12,8 @@ export default {
     jobTitle: `Senior Web Developer`,
     note: `Experience: ${xpYears} years`,
     abstract: [
-      `My passionate and inquiring nature lead me to a constant quest for new technical, intellectual and human challenges.`,
-      `This brought me to a wide variety of roles, from which I gained diversed knowledge and experience (software developement and architecture, sysadmin and netadmin, teaching and pedagogy, management, communication, etc.).`,
+      `My passionate and inquiring nature lead me to a constant quest for new technical, intellectual, and human challenges.`,
+      `This brought me to a wide variety of roles, from which I gained diverse knowledge and experience (software development and architecture, sysadmin and netadmin, teaching and pedagogy, management, communication, etc.).`,
       html`Web development &mdash; and more specifically the web platform, dev tools et standards &mdash; is my main focus since 2014, and a long-time passion.`,
     ],
     langs: {
@@ -98,27 +98,27 @@ export default {
     items: [
       [
         {
-          company: {name: 'Freelance'},
+          company: {name: 'freelance'},
           startDate: 'jan. 2020',
           jobTitle: 'Consultant & Trainer',
           icon: frWordings.experience.items[0][0].icon,
           details: 'Web Development & Architecture',
         },
         {
-          company: {name: 'blindnet', details: 'start-up'},
+          company: {name: 'Blindnet', details: 'start-up'},
           startDate: 'feb. 2022',
           endDate: 'oct. 2022',
           jobTitle: 'VP, Technology & Pedagogy',
           details: [
-            'Leading Web, Java and Scala development',
-            'Customer Support & Technical Documentation maintenance',
-            'Privacy Advocacy',
+            'Leading Web, Java, and Scala development.',
+            'Customer Support & Technical Documentation maintenance.',
+            'Privacy Advocacy.',
           ],
           icon: frWordings.experience.items[0][1].icon,
         },
         {
           company: {
-            name: 'Editions ENI',
+            name: 'ENI Editions',
             details: "book publisher",
           },
           jobTitle: 'Author',
@@ -126,11 +126,11 @@ export default {
           endDate: 'march 2021',
           icon: frWordings.experience.items[0][2].icon,
           details: [
-            html`Wrote of a <a href=${urlLivreENI} target="_blank" rel="noferrer noopener"
-                ><strong>thorough book</strong></a> briging a new perspective on Modern Web Development fundamentals
-              (608 pages)`,
-            "Developed a wide variety of examples, tests and automation tools (16500 lines of code)",
-            'Created Open Source libraries, tools, scripts and projects as proof of concepts and illustrations',
+            html`Wrote a <a href=${urlLivreENI} target="_blank" rel="noferrer noopener"
+                ><strong>thorough book</strong></a> bringing a new perspective on Modern Web Development fundamentals
+              (608 pages).`,
+            "Developed a wide variety of examples, tests, and automation tools (16500 lines of code).",
+            'Created Open Source libraries, tools, scripts, and projects as proof of concepts and illustrations.',
           ],
         },
         {
@@ -144,10 +144,10 @@ export default {
           icon: frWordings.experience.items[0][3].icon,
           webp: frWordings.experience.items[0][3].webp,
           details: [
-            html`<strong>DevX, performance and modernisation</strong> :
+            html`<strong>DevX, performance, and modernization</strong> :
               lead and contribute to the migration from
-              <em>AngularJS</em> to <em>Web Components</em>`,
-            "Set up strategies and tools to facilite content creation and technical events management (via Gatsby, Netlify CMS & GitHub)",
+              <em>AngularJS</em> to <em>Web Components</em>.`,
+            "Set up strategies and tools to facilitate content creation and technical events management (via Gatsby, Netlify CMS & GitHub).",
           ],
         },
         {
@@ -158,9 +158,9 @@ export default {
           icon: frWordings.experience.items[0][4].icon,
           webp: frWordings.experience.items[0][4].webp,
           details: [
-            html`<strong>Twofold mission</strong> : technical expertise (3d/w) and developer advocacy`,
-            html`Improved the stability and maintainability of an <strong>Angular, NgRx et Preact</strong> application as a technical leader for "la Société Générale"`,
-            html`Supervisation and training of a team of <strong>30 Angular developers</strong> (in both Paris & Hong Kong) for the BNP Paribas company`,
+            html`<strong>Twofold mission</strong> : technical expertise (3d/w) and developer advocacy.`,
+            html`Improved the stability and maintainability of an <strong>Angular, NgRx et Preact</strong> application as a technical leader for "la Société Générale".`,
+            html`Supervision and training of a team of <strong>30 Angular developers</strong> (in both Paris & Hong Kong) for the BNP Paribas company.`,
             html`Audit and performance improvement of several Progressive Web Apps (<em>in VanillaJS, React, Vue, Angular</em>), migrations from AngularJS to Angular, defined the architecture for several new Web Apps, etc.`,
           ],
         },
@@ -174,10 +174,10 @@ export default {
           icon: frWordings.experience.items[1][0].icon,
           webp: frWordings.experience.items[1][0].webp,
           details: [
-            html`<strong>Architecture & Technical Direction for 8 front-end JavaScript projets</strong> (<em>AngularJS, JQuery, PHP et Node.js</em>), leading 3 teams of 12 developers`,
-            html`Defining the reference web front-end web architecture for Sedona and the <em>Harmonie Mutuelle</em> group`,
-            html`<strong>Modernisation</strong> of Web technologies usages for the whole groupe (Sedona, West, RedShift et Inadeo brands)`,
-            html`<em>(From dec. 2016)</em> defining and maintaining transversal guidelines and tooling for 3 projets, leadings 6 teams (30 developers), as the <strong>lead Angular architect</strong> for <em>Saint Gobain</em>`,
+            html`<strong>Architecture & Technical Direction for 8 front-end JavaScript projects</strong> (<em>AngularJS, JQuery, PHP et Node.js</em>), leading 3 teams of 12 developers.`,
+            html`Defining the reference web front-end web architecture for Sedona and the <em>Harmonie Mutuelle</em> group.`,
+            html`<strong>Modernisation</strong> of Web technologies usages for the whole groupe (Sedona, West, RedShift et Inadeo brands).`,
+            html`<em>(From dec. 2016)</em> <strong>Lead Angular Architect</strong>, <em>Saint Gobain</em>: Defining and maintaining transversal guidelines and tooling for 3 projects, leading 6 teams (30 developers).`,
           ],
         },
         {
@@ -187,19 +187,19 @@ export default {
           endDate: 'nov. 2015',
           icon: frWordings.experience.items[1][1].icon,
           webp: frWordings.experience.items[1][1].webp,
-          details: html`Development of the account management and Euromillions "widgets" with <strong>AngularJS 1.4 and ES2015</strong> for the fdj.fr portal, leading a team of 8 developers`,
+          details: html`Development of the account management and Euromillions "widgets" with <strong>AngularJS 1.4 and ES2015</strong> for the fdj.fr portal, leading a team of 8 developers.`,
           shortLine: true,
         },
         {
-          company: {name: 'Freelance'},
-          jobTitle: 'Formateur, Consultant',
+          company: {name: 'freelance'},
+          jobTitle: 'Trainer, Consultant',
           startDate: 'mai 2011',
           endDate: 'nov. 2015',
           icon: frWordings.experience.items[1][2].icon,
           webp: frWordings.experience.items[1][2].webp,
           details: [
-            html`<strong>38 courses</strong> delivered both on-line and face-to-face`,
-            html`<strong>3 applications</strong> Java (Spring, Struts, Hibernate) & Android developed`,
+            html`<strong>38 courses</strong> delivered both on-line and face-to-face.`,
+            html`<strong>3 applications</strong> Java (Spring, Struts, Hibernate) & Android developed.`,
           ],
           shortLine: true,
         },
@@ -211,8 +211,8 @@ export default {
           icon: frWordings.experience.items[1][3].icon,
           webp: frWordings.experience.items[1][3].webp,
           details: [
-            html`hiring and training <strong>70 teachers hired</strong> for <strong>Linux, Apple & Sécurité</strong> education on the 30 sites of the group`,
-            html`defining, writing and managing <strong>7 educational units</strong>`,
+            html`Hiring and training <strong>70 teachers hired</strong> for <strong>Linux, Apple & Sécurité</strong> education on the 30 sites of the group.`,
+            html`Defining, writing, and managing <strong>7 educational units</strong>.`,
           ],
           shortLine: true,
         },
@@ -224,7 +224,7 @@ export default {
           icon: frWordings.experience.items[1][4].icon,
           webp: frWordings.experience.items[1][4].webp,
           details:
-            'treaching 12 educational units on 18 sites, in 3 different countries',
+            'Teaching 12 educational units on 18 sites, in 3 different countries.',
           shortLine: true,
         },
       ],

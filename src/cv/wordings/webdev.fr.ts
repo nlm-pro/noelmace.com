@@ -186,21 +186,21 @@ export default {
     items: [
       [
         {
-          company: {name: 'Freelance'},
+          company: {name: 'freelance'},
           startDate: 'janv. 2020',
           jobTitle: 'Consultant, Formateur',
           icon: '/images/companies-logos/fwd.svg',
           details: 'Développement & architecture Web',
         },
         {
-          company: {name: 'blindnet', details: 'start-up'},
+          company: {name: 'Blindnet', details: 'start-up'},
           startDate: 'févr. 2022',
           endDate: 'oct. 2022',
           jobTitle: 'VP, Technology & Pedagogy',
           details: [
-            'Encadrement du développement Web, Java et Scala',
-            'Accompagnement client et maintenance des documentations techniques',
-            'Promotion de la privacy',
+            'Encadrement du développement Web, Java et Scala.',
+            'Accompagnement client et maintenance des documentations techniques.',
+            'Promotion de la privacy.',
           ],
           icon: '/images/companies-logos/blindnet.svg',
         },
@@ -221,9 +221,8 @@ export default {
                   Modernes</strong
                 ></a
               >
-              (608 pages)`,
-            "16500 lignes de code d'exemple, testées et exécutables",
-            'Développement de bibliothèques, outils, scripts et projets permettant de valider et appuyer la rédaction',
+              (608 pages et 16500 lignes de code d'exemple, testées et exécutables).`,
+            'Développement de bibliothèques, outils, scripts et projets permettant de valider et appuyer la rédaction.',
           ],
         },
         {
@@ -231,7 +230,7 @@ export default {
             name: 'Bonitasoft',
             details: 'éditeur logiciel Open Source (BPM)',
           },
-          jobTitle: 'Developer Advocate Web',
+          jobTitle: 'Developer Advocate, Web',
           startDate: 'avr. 2019',
           endDate: 'oct. 2019',
           icon: '/images/companies-logos/bonitasoft.png',
@@ -239,8 +238,8 @@ export default {
           details: [
             html`<strong>Modernisation, DevX et performance</strong> :
               contribution et accompagnement à une transition de
-              <em>AngularJS</em> aux <em>Web Components</em>`,
-            "Mise en place d'une stratégie et d'outils facilitant la production de contenus, ainsi que la gestion de 213 évènements (via Gatsby, Netlify CMS, GitHub)",
+              <em>AngularJS</em> aux <em>Web Components</em>.`,
+            "Mise en place d'une stratégie et d'outils facilitant la production de contenus, ainsi que la gestion de 213 évènements (via Gatsby, Netlify CMS, GitHub).",
           ],
         },
         {
@@ -252,13 +251,13 @@ export default {
           webp: '/images/companies-logos/sfeir.webp',
           details: [
             html`<strong>Double mission</strong> : expertise technique (3j/5) et
-              advocacy`,
+              advocacy.`,
             html`Stabilisation et amélioration de la maintenabilité d'une
               application <strong>Angular, NgRx et Preact</strong> en tant que
-              tech lead pour la Société Générale`,
+              tech lead pour la Société Générale.`,
             html`Encadrement et montée en compétence d'une équipe de
               <strong>30 développeurs Angular</strong> (Paris & Hong Kong) pour
-              BNP Paribas`,
+              BNP Paribas.`,
             "Audit et amélioration des performances de Progressive Web Apps (Vanilla, React, Vue, Angular), migrations AngularJS-Angular, réponses à appels d'offre, etc.",
           ],
         },
@@ -274,18 +273,17 @@ export default {
           details: [
             html`<strong>Direction technique de 8 projets</strong> front-end
               JavaScript (AngularJS, JQuery, PHP et Node.js) menés par 3 équipe
-              de 12 développeurs`,
+              de 12 développeurs.`,
             html`Définition de l'architecture front-end web de référence pour
-              Sedona ainsi que le groupe <em>Harmonie Mutuelle</em>`,
+              Sedona ainsi que le groupe <em>Harmonie Mutuelle</em>.`,
             html`<strong>Réponse à appels d'offre</strong> et
               <strong>modernisation</strong> de l'usage des technologies Web sur
-              l'ensemble du groupe (marques Sedona, West, RedShift et Inadeo)`,
-            html`<em>(À partir de déc. 2016)</em> suivi, développement et mise
+              l'ensemble du groupe (marques Sedona, West, RedShift et Inadeo).`,
+            html`<em>(À partir de déc. 2016)</em> <strong
+                >Architecte référant Angular</strong
+                >, <em>Saint Gobain</em>&nbsp;: suivi, développement et mise
               en place des codes et outils transverses sur 3 projets, menés par
-              6 équipes (30 développeurs), en tant qu'<strong
-                >architecte référant Angular</strong
-              >
-              pour le compte de <em>Saint Gobain</em>`,
+              6 équipes (30 développeurs).`,
           ],
         },
         {
@@ -301,16 +299,16 @@ export default {
           shortLine: true,
         },
         {
-          company: {name: 'Freelance'},
+          company: {name: 'freelance'},
           jobTitle: 'Formateur, Consultant',
           startDate: 'mai 2011',
           endDate: 'nov. 2015',
           icon: '/images/companies-logos/nmc.png',
           webp: '/images/companies-logos/nmc.webp',
           details: [
-            html`<strong>38 formations</strong> délivrées en ligne et présentiel`,
+            html`<strong>38 formations</strong> délivrées en ligne et présentiel.`,
             html`<strong>3 applications</strong> Java (Spring, Struts,
-              Hibernate) & Android développées`,
+              Hibernate) & Android développées.`,
           ],
           shortLine: true,
         },
@@ -325,9 +323,9 @@ export default {
             html`<strong>70 formateurs recrutés</strong> et formés pour
               l'enseignement de
               <strong>3 matières (Linux, Apple & Sécurité)</strong> sur les 30
-              sites du groupe à l'international`,
+              sites du groupe à l'international.`,
             html`<strong>7 unités pédagogiques</strong> définies, rédigées et
-              encadrées`,
+              encadrées.`,
           ],
           shortLine: true,
         },
@@ -338,8 +336,8 @@ export default {
           endDate: 'juin 2010',
           icon: '/images/companies-logos/supinfo.jpg',
           webp: '/images/companies-logos/supinfo.webp',
-          details: html`12 unités pégagogiques enseignées sur 18 sites dans<br />3
-            pays (+ DOM)`,
+          details: html`12 unités pédagogiques enseignées sur 18 sites dans<br />3
+            pays (+ DOM).`,
           shortLine: true,
         },
       ],
