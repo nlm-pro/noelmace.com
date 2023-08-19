@@ -7,7 +7,7 @@ export class AppRoutedActions extends LitElement {
   static override styles = [
     css`
       :host {
-        display: block;
+        display: var(--host-display, none);
       }
     `,
   ];
@@ -21,6 +21,11 @@ export class AppRoutedActions extends LitElement {
   ]);
 
   override render() {
-    return this.routing.routeTemplate ?? ``;
+    let hostDisplay = 'none';
+    if (this.routing.routeTemplate) {
+      hostDisplay = 'block'
+    }
+    this.style.setProperty('--host-display', hostDisplay);
+    return this.routing.routeTemplate;
   }
 }
