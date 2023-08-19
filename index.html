@@ -293,9 +293,19 @@
           margin-inline: 5px;
         }
         header {
-          padding: 1rem .5rem;
+          padding: .5rem;
+        }
+        header h1 {
+          flex-grow: 1;
+          text-align: center;
+        }
+        header spacer {
+          flex-grow: 2;
         }
         .header__menu {
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: flex-end;
           gap: .5rem;
         }
       }
