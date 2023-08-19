@@ -3,14 +3,14 @@ import {customElement} from 'lit/decorators.js';
 import {WithWordings} from '../wordings/with-wordings.mixin';
 import {resumeStyles} from '../styles/common';
 import {lastPageStyles} from '../styles/last-page';
-import type {Constructor, litString} from '../../shared/lit-dev';
+import type {Constructor, LitString} from '../../shared/lit-dev';
 
 export interface ResumeEducationWordings {
-  title: litString;
+  title: LitString;
   items: {
-    school?: litString;
-    diploma: litString;
-    year?: litString;
+    school?: LitString;
+    diploma: LitString;
+    year?: LitString;
   }[];
 }
 
