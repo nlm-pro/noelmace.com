@@ -23,12 +23,15 @@ export const clickEventHandler =
     }
 
     // support Shadow DOM
-    let anchor: HTMLAnchorElement | null = e.composedPath()[0] as HTMLAnchorElement | null ;
+    let anchor: HTMLAnchorElement | null | undefined = e.composedPath()[0] as HTMLAnchorElement | undefined ;
 
     if (!anchor) return;
 
     if (anchor.tagName !== "A") {
       anchor = anchor.closest("a");
+      if (!anchor) {
+        anchor = e.composedPath().find((target) => target instanceof Element && target.tagName === 'A') as HTMLAnchorElement | undefined;
+      }
       if (!anchor) return;
     }
 
