@@ -216,11 +216,21 @@
         font-size: 20px;
         margin: 0;
         min-height: var(--header-content-height);
+        flex-shrink: 0;
       }
 
       header h1 a {
         color: var(--font-on-primary);
         text-decoration: none;
+      }
+
+      .header__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.2rem;
       }
 
       locale-picker {
@@ -239,7 +249,6 @@
         top: 200px;
         left: 50%;
         text-indent: -9999em;
-
       }
       .spinner::before,
       .spinner::after {
@@ -280,11 +289,14 @@
       }
 
       @media screen and (max-width: 786px) {
-        locale-picker  {
+        locale-picker {
           margin-inline: 5px;
         }
         header {
-          padding: .5rem;
+          padding: 1rem .5rem;
+        }
+        .header__menu {
+          gap: .5rem;
         }
       }
 
@@ -300,8 +312,11 @@
     <header>
       <h1><a href="/">Noël Macé</a></h1>
       <div class="spacer"></div>
-      <locale-picker></locale-picker>
-      <nmc-theme-toggle></nmc-theme-toggle>
+      <div class="header__menu">
+        <nmc-routed-actions></nmc-routed-actions>
+        <locale-picker></locale-picker>
+        <nmc-theme-toggle></nmc-theme-toggle>
+      </div>
     </header>
     <main>
       <nmc-main-views>

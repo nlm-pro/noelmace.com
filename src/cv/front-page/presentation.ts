@@ -114,6 +114,11 @@ export class ResumePresentationElement extends WithWordings<
           text-decoration: none;
           color: inherit;
         }
+
+        h1 {
+          /* already in the app header */
+          display: none;
+        }
       }
     `,
   ];

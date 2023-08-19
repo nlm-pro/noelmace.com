@@ -62,6 +62,14 @@
   <source>cover of the book, title in french:</source>
   <target>couverture du livre : </target>
 </trans-unit>
+<trans-unit id="s9ae3ff84f2b87d2b">
+  <source>Download PDF</source>
+  <target>Télécharger le PDF</target>
+</trans-unit>
+<trans-unit id="s259e7392ea517844">
+  <source>cv-en.pdf</source>
+  <target>cv-fr.pdf</target>
+</trans-unit>
 </body>
 </file>
 </xliff>

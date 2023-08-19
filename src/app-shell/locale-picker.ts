@@ -16,6 +16,10 @@ const localeNames: {
 @localized()
 export class LocalePicker extends LitElement {
   static override styles = css`
+    :host {
+      display: block;
+    }
+    
     .select, select {
       background-color: var(--light-on-primary);
       color: var(--font-on-primary);

@@ -125,8 +125,8 @@ export class RoutingController implements ReactiveController {
       if (route.loader) {
         await route.loader();
       }
-      this.routeTemplate = route.template;
-      this.host.requestUpdate();
     }
+    this.routeTemplate = route?.template || '';
+    this.host.requestUpdate();
   }).bind(this);
 }
