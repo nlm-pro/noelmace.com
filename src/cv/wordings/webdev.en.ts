@@ -144,7 +144,7 @@ export default {
           icon: frWordings.experience.items[0][3].icon,
           webp: frWordings.experience.items[0][3].webp,
           details: [
-            html`<strong>DevX, performance, and modernization</strong> :
+            html`<strong>DevX, performance, and modernization</strong>:
               lead and contribute to the migration from
               <em>AngularJS</em> to <em>Web Components</em>.`,
             "Set up strategies and tools to facilitate content creation and technical events management (via Gatsby, Netlify CMS & GitHub).",
@@ -158,7 +158,7 @@ export default {
           icon: frWordings.experience.items[0][4].icon,
           webp: frWordings.experience.items[0][4].webp,
           details: [
-            html`<strong>Twofold mission</strong> : technical expertise (3d/w) and developer advocacy.`,
+            html`<strong>Twofold mission</strong>: technical expertise (3d/w) and developer advocacy.`,
             html`Improved the stability and maintainability of an <strong>Angular, NgRx et Preact</strong> application as a technical leader for "la Société Générale".`,
             html`Supervision and training of a team of <strong>30 Angular developers</strong> (in both Paris & Hong Kong) for the BNP Paribas company.`,
             html`Audit and performance improvement of several Progressive Web Apps (<em>in VanillaJS, React, Vue, Angular</em>), migrations from AngularJS to Angular, defined the architecture for several new Web Apps, etc.`,
@@ -175,7 +175,7 @@ export default {
           webp: frWordings.experience.items[1][0].webp,
           details: [
             html`<strong>Architecture & Technical Direction for 8 front-end JavaScript projects</strong> (<em>AngularJS, JQuery, PHP et Node.js</em>), leading 3 teams of 12 developers.`,
-            html`Defining the reference web front-end web architecture for Sedona and the <em>Harmonie Mutuelle</em> group.`,
+            html`Defining the reference web front-end architecture for Sedona and the <em>Harmonie Mutuelle</em> group.`,
             html`<strong>Modernisation</strong> of Web technologies usages for the whole groupe (Sedona, West, RedShift et Inadeo brands).`,
             html`<em>(From dec. 2016)</em> <strong>Lead Angular Architect</strong>, <em>Saint Gobain</em>: Defining and maintaining transversal guidelines and tooling for 3 projects, leading 6 teams (30 developers).`,
           ],
@@ -199,7 +199,7 @@ export default {
           webp: frWordings.experience.items[1][2].webp,
           details: [
             html`<strong>38 courses</strong> delivered both on-line and face-to-face.`,
-            html`<strong>3 applications</strong> Java (Spring, Struts, Hibernate) & Android developed.`,
+            html`<strong>3 Java (Spring, Struts, Hibernate) & Android applications</strong> developed.`,
           ],
           shortLine: true,
         },
@@ -211,7 +211,7 @@ export default {
           icon: frWordings.experience.items[1][3].icon,
           webp: frWordings.experience.items[1][3].webp,
           details: [
-            html`Hiring and training <strong>70 teachers hired</strong> for <strong>Linux, Apple & Sécurité</strong> education on the 30 sites of the group.`,
+            html`Hiring and training <strong>70 teachers hired</strong> for <strong>Linux, Apple & Security</strong> education on the 30 sites of the group.`,
             html`Defining, writing, and managing <strong>7 educational units</strong>.`,
           ],
           shortLine: true,
@@ -220,7 +220,7 @@ export default {
           company: {name: 'Supinfo'},
           jobTitle: 'Teacher / Trainer',
           startDate: 'oct. 2009',
-          endDate: 'juin 2010',
+          endDate: 'june 2010',
           icon: frWordings.experience.items[1][4].icon,
           webp: frWordings.experience.items[1][4].webp,
           details:
