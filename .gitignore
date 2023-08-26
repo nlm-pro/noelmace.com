@@ -10,7 +10,7 @@ build/
 generated/
 
 # CV with contact information
-cv-complet.pdf
+cv-contact*.pdf
 
 ### VS Code ###
 .vscode/*
