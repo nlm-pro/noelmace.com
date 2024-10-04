@@ -24,12 +24,11 @@ export const xpYears = dateDiff(new Date('2009-03-01'));
 export default {
   presentation: {
     name: 'Noël Macé',
-    jobTitle: 'Développeur Web Senior',
+    jobTitle: 'Ingénieur Logiciel Senior',
     note: `${xpYears} ans d'expérience`,
     abstract: [
       `D'un naturel passionné et investi, je recherche perpétuellement de nouveaux défis techniques, intellectuels et humains.`,
       `Grâce à cela, j'ai au cours des années accumulé une expérience complète et variée dans de nombreux domaines (développement et architecture applicative, administration système et réseaux, pédagogie, management, communication, etc.).`,
-      `Depuis 2014, mon focus technique se porte essentiellement sur la plateforme Web, ses outils et ses standards.`,
     ],
     langs: {
       title: 'Langues',
@@ -117,16 +116,16 @@ export default {
           caption: 'expertise',
         },
         content: [
-          html`Focus sur les
-            <strong>standards et principes transverses</strong> (Web Components,
-            Web APIs, PWAs, PRPL, a11y, performances, etc.)`,
           html`Maitrise de nombreux frameworks et bibliothèques (<strong
-              >Lit, Open WC, Angular, React, Vue, Redux, Gatsby, 11ty,
+              >Next.js, Lit, Open WC, Angular, React, Vue, Redux, Gatsby, 11ty,
               etc.</strong
             >)`,
           html`Maitrise avancée de
             <strong>Angular, Angular CLI & Nrwl/Nx</strong> (contributeur de
             2016 à 2018, puis suivi&nbsp;régulier)`,
+          html`Focus sur les
+            <strong>standards et principes transverses</strong> (Web Components,
+            Web APIs, PWAs, PRPL, a11y, performances, etc.)`,
           html`<strong>Livre</strong> complet sur les principes fondamentaux de
             <em
               ><a
@@ -137,8 +136,8 @@ export default {
               ></em
             >
             publié aux éditions ENI en 2021`,
-          html`Aptitudes fullstack et DevOps (REST, ORM, CI/CD, SGBD, Docker,
-          PaaS, Node.js, Python, Java, etc.)`,
+          html`<strong>Aptitudes fullstack et DevOps</strong> (REST, ORM, CI/CD,
+            SGBD, Docker, PaaS, Node.js, Python, Java, etc.)`,
         ],
       },
       {
@@ -193,6 +192,18 @@ export default {
           details: 'Développement & architecture Web',
         },
         {
+          company: {name: 'Inflyter', details: 'start-up'},
+          startDate: 'sept. 2023',
+          endDate: 'sept. 2024',
+          jobTitle: 'Lead Dev Web',
+          details: [
+            'Encadrement du développement des projets Web',
+            "Mise en place d'une nouvelle plateforme e-commerce from scratch (Next.js, Typescript & App Router)",
+          ],
+          icon: '/images/companies-logos/inflyter.jpg',
+          webp: '/images/companies-logos/inflyter.webp',
+        },
+        {
           company: {name: 'Blindnet', details: 'start-up'},
           startDate: 'févr. 2022',
           endDate: 'oct. 2022',
@@ -221,7 +232,8 @@ export default {
                   Modernes</strong
                 ></a
               >
-              (608 pages et 16500 lignes de code d'exemple, testées et exécutables).`,
+              (608 pages et 16500 lignes de code d'exemple, testées et
+              exécutables).`,
             'Développement de bibliothèques, outils, scripts et projets permettant de valider et appuyer la rédaction.',
           ],
         },
@@ -279,11 +291,11 @@ export default {
             html`<strong>Réponse à appels d'offre</strong> et
               <strong>modernisation</strong> de l'usage des technologies Web sur
               l'ensemble du groupe (marques Sedona, West, RedShift et Inadeo).`,
-            html`<em>(À partir de déc. 2016)</em> <strong
-                >Architecte référant Angular</strong
-                >, <em>Saint Gobain</em>&nbsp;: suivi, développement et mise
-              en place des codes et outils transverses sur 3 projets, menés par
-              6 équipes (30 développeurs).`,
+            html`<em>(À partir de déc. 2016)</em>
+              <strong>Architecte référant Angular</strong>,
+              <em>Saint Gobain</em>&nbsp;: suivi, développement et mise en place
+              des codes et outils transverses sur 3 projets, menés par 6 équipes
+              (30 développeurs).`,
           ],
         },
         {
@@ -306,7 +318,8 @@ export default {
           icon: '/images/companies-logos/nmc.png',
           webp: '/images/companies-logos/nmc.webp',
           details: [
-            html`<strong>38 formations</strong> délivrées en ligne et présentiel.`,
+            html`<strong>38 formations</strong> délivrées en ligne et
+              présentiel.`,
             html`<strong>3 applications</strong> Java (Spring, Struts,
               Hibernate) & Android développées.`,
           ],

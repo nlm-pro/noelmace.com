@@ -9,12 +9,11 @@ export default {
   ...frWordings,
   presentation: {
     ...frWordings.presentation,
-    jobTitle: `Senior Web Developer`,
+    jobTitle: `Senior Software Engineer`,
     note: `Experience: ${xpYears} years`,
     abstract: [
       `My passionate and inquiring nature lead me to a constant quest for new technical, intellectual, and human challenges.`,
-      `This brought me to a wide variety of roles, from which I gained diverse knowledge and experience (software development and architecture, sysadmin and netadmin, teaching and pedagogy, management, communication, etc.).`,
-      html`Web development &mdash; and more specifically the web platform, dev tools et standards &mdash; is my main focus since 2014, and a long-time passion.`,
+      `This brought me to a wide variety of roles, from which I gained diverse knowledge and experience (software development and architecture, sysadmin and netadmin, teaching and pedagogy, management, communication, etc.).`
     ],
     langs: {
       title: 'Languages',

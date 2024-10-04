@@ -80,6 +80,10 @@ export default class ResumeElement extends LitElement {
         margin-right: auto;
       }
 
+      .main-column {
+        display: flex;
+      }
+
       nmc-cv-intro {
         padding-bottom: 1rem;
       }
@@ -173,7 +177,7 @@ export default class ResumeElement extends LitElement {
   override render() {
     return html`
       <div class="first-page">
-        <section id="cv__presentation">
+        <section id="cv__presentation" class="main-column">
           <nmc-cv-presentation
             .wordings=${this.wordings?.presentation}
           ></nmc-cv-presentation>
@@ -212,9 +216,11 @@ export default class ResumeElement extends LitElement {
 
   private async loadWordings(locale: Locale) {
     try {
-      const module = await import(`./wordings/${this.wordingsCode}.${locale}.js`);
+      const module = await import(
+        `./wordings/${this.wordingsCode}.${locale}.js`
+      );
       this.wordings = module.default;
-    } catch(err) {
+    } catch (err) {
       console.error(err);
     }
   }
